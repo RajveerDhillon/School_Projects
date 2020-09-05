@@ -1,0 +1,44 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY rajveer IS
+PORT (Clrn, E, Clkn : IN STD_LOGIC; --clrn is your reset button
+STUDENT_ID : out std_logic_vector(3 downto 0);
+Q : OUT STD_LOGIC_VECTOR (0 TO 2));
+END rajveer;
+ARCHITECTURE Behavior OF rajveer IS
+signal Qreg : STD_LOGIC_VECTOR (0 TO 2);
+BEGIN
+PROCESS (Clrn, Clkn)
+BEGIN
+IF Clrn = '0' THEN
+Qreg <= "000";
+ELSIF (Clkn'EVENT AND Clkn = '0') THEN
+IF E = '1' THEN
+.. -- complete your rajveer flip-flop outputs here..
+..
+Qreg(1) <= Qreg(0);
+..
+..
+ELSE
+Qreg <= Qreg;
+END IF;
+END IF;
+-- STUDENT_ID variable represents the last 6 digits of your student ID
+--hence d4 is the fourth digit of your
+--student ID in four bits, d5 is the fifth and so on. For example, for
+--Student ID 500435429,
+--d4 is 0100, d5 is 0011 and so on
+CASE Qreg IS
+WHEN "000" =>
+STUDENT_ID <= ' ..... --d1
+WHEN "100" =>
+STUDENT_ID <= ..... --d2
+. --d3
+. --d4
+. --d5
+--d6
+WHEN OTHERS => STUDENT_ID <= "----";--error
+END CASE;
+END PROCESS;
+Q <= Qreg;
+END Behavior;
