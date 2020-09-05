@@ -1,0 +1,53 @@
+#include "mySort.h"
+void merge(int array[], int first, int middle, int last)
+{	int i, j, k;
+	int ind1 = middle -first + 1;
+	int ind2 = last - middle;
+	
+	int leftHalf[ind1], rightHalf[ind2];
+	for (i = 0; i < ind1; i++) {
+		myCopy(&array[first+i], &leftHalf[i]);
+	}
+	for (j = 0; j < ind2; j++) {
+		myCopy(&array[middle+j+1], &rightHalf[j]);
+	}
+	
+	i = 0;
+	j = 0;
+	k = first;
+	while (myCompare(i, ind1) < 0 && myCompare(j, ind2) < 0){
+		if (leftHalf[i] <= rightHalf[j]){
+			myCopy(&leftHalf[i], &array[k]);
+			i++;		
+		}
+		else{
+			myCopy(&rightHalf[j], &array[k]);
+			j++;		
+		}
+		k++;
+	}
+	while (i < ind1){
+		myCopy(&leftHalf[i], &array[k]);
+		i++;
+		k++;
+	}
+	while (j < ind2){
+		array[k] = rightHalf[j];
+		myCopy(&rightHalf[j], &array[k]), 
+		j++;
+		k++;
+	}
+}
+
+void mySort(int array[], unsigned int first, unsigned int last)
+{
+	if (first < last){
+		int middle = first + ((last - first)/2);
+
+		mySort(array, first, middle);
+		mySort(array, middle+1, last);
+		
+		merge(array, first, middle, last);
+
+	}
+}

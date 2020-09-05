@@ -1,0 +1,53 @@
+//  
+//
+//
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+#define HASH_TABLE_SIZE 1057
+typedef struct Entry Entry, *EntryPtr;
+struct Entry {
+  char * string;
+  int count;
+};
+Entry hash_table[HASH_TABLE_SIZE];
+
+
+//h - sum of char in tag
+
+//i = h mod 1057
+
+//if hashtable[i].string != NULL
+
+//if (strcmp(hash_stable[i].string, tag));
+void add(char * tag, num)
+{
+  int sum = 0;
+  int key;
+  for (i = 0; i <= num; i++;){
+    sum += tag[i];
+  }
+  key = sum%HASH_TABLE_SIZE;
+  if(hash_table[key].string != NULL){
+    if (hash_table[key].string == tag){
+      hash_table[key].count++;
+    }
+    else{
+      while(hash_table[key].string != NULL){
+        key++;
+        if(hash_table[key].string != NULL){
+          if(hash_table[key].string == tag){
+            hash_table[key].count++;
+            break;
+          }
+        }
+      }
+    }
+  }
+  if(hash_table[key].string == NULL){
+    hash_table[key].count++;
+    hash_table[key].string = tag;
+  }
+  
+}

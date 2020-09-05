@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+extern char *  pop();
+extern void push(char *);
+
+int main(int argc, char * argv[])
+{
+	int ch;
+        char temp[100], temp2[100];
+	while ((ch = getchar()) != EOF) {
+		if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
+			continue;
+    		else if(ch =='<'){
+			ch = getchar();
+                        if(isalpha(ch)){
+				while(temp[i] != '>'){
+					temp[i] = getchar();
+				}
+			}
+                }
+    
+    
+  }
+  exit(0);
+}

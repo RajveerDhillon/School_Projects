@@ -1,0 +1,53 @@
+Rajveer Dhillon 500777569
+with help from:
+Ming Liu
+Parsh Patel
+
+There are extra txt files called "worst(number)" and "best(number)" so that I could answer Q1.
+
+1. I have completed the insertion sort and merge sort. With the help from my colleagues, I was able to have the
+insertion sort working and got pointers for merge sort. I couldn't hand in the lab earlier due to complications that 
+can be attributed to the SSH client not giving permission to execute programs.
+
+2. Insertion Sort:
+worst:
+	comparisons: n^2
+
+	swaps: n^2
+
+	copy: n
+
+best:
+	comparisons: n, specifically 3n
+
+	swap: 0
+
+	copy: n, specifically 3n
+
+average: 
+	comparisons: constant*n
+
+	swap: constant*n
+
+	copy: constant*n
+
+b. Merge Sort:
+worst:
+	compare: looks like n, but most probably n^2 due to it being worst case
+
+	swap: 0
+
+	copy: n, same as compare.
+best:	
+	compare: n
+
+	swap: 0
+
+	copy: n
+
+average: 
+	compare: constant*n
+
+	swap: 0
+
+	copy: constant*n

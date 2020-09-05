@@ -1,0 +1,15 @@
+#include "mySort.h"
+
+void mySort(int array[], unsigned int first, unsigned int last)
+{
+	int i, j, inId;
+	for (i = 1; i < last; i++) {
+		myCopy(&i, &inId);
+		for (j = i + 1; j < last; j++) {
+			if (myCompare(array[j], array[inId]) < 0) {
+				myCopy(&j, &inId);
+			}
+			mySwap(&array[inId], &array[i]);
+		}
+	}
+}
