@@ -49,6 +49,6 @@ public class Ticket {
     
     @Override
         public String toString(){
-            return("Name: " + passen.name + ", FlightNumber: " + numTicket + ", From: " + flit.orig + ", to " + flit.dest + ", Departure Time: " + flit.depTime + ", Original Price: " + flit.orgPrice);
+            return("Name: " + passen.name + ", FlightNumber: " + numTicket + ", From: " + flit.orig + ", to " + flit.dest + ", Departure Time: " + flit.depTime + ", Price: " + flit.orgPrice);
         }
 }

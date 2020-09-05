@@ -32,11 +32,11 @@ public class Member extends Passenger {
     @Override
     public double applyDiscount(double p){
         if (yrOfMem > 5){
-            p = p - 0.50*p;
+            p = 0.5*p;
             return p;
         }
         else if (yrOfMem < 5 && yrOfMem > 1){
-            p = p - 0.10*p;
+            p = (9*p)/10;
             return p;
         }
         
