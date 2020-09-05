@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/student2/j262li/coe328/lab6/simulation/modelsim
+Eseg7
+w1528326214
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 d/home/student2/j262li/coe328/lab6/simulation/modelsim
+8/home/student2/j262li/coe328/lab3/seg7.vhd
+F/home/student2/j262li/coe328/lab3/seg7.vhd
+l0
+L3
+Vd:oI]5X]K7G06:@bJJS[=2
+!s100 D7@MFC2ojjoYSdRNa6nPZ0
+Z4 OV;C;10.1d;51
+31
+!i10b 1
+!s108 1529623327.428379
+!s90 -reportprogress|300|-93|-work|work|/home/student2/j262li/coe328/lab3/seg7.vhd|
+!s107 /home/student2/j262li/coe328/lab3/seg7.vhd|
+o-93 -work work -O0
+Z5 tExplicit 1

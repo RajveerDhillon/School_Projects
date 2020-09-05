@@ -1,0 +1,26 @@
+# do lab66_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /CMC/tools/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /CMC/tools/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/student2/j262li/coe328/lab3/seg7.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seg7
+# -- Compiling architecture Behavior of seg7
+# ** Error: /home/student2/j262li/coe328/lab3/seg7.vhd(14): (vcom-1339) Case statement choices cover only 16 out of 6561 cases.
+# ** Error: /home/student2/j262li/coe328/lab3/seg7.vhd(34): (vcom-1339) Case statement choices cover only 2 out of 9 cases.
+# ** Error: /home/student2/j262li/coe328/lab3/seg7.vhd(40): VHDL Compiler exiting
+# ** Error: /CMC/tools/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+# Error in macro ./lab66_run_msim_rtl_vhdl.do line 8
+# /CMC/tools/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {/home/student2/j262li/coe328/lab3/seg7.vhd}"
