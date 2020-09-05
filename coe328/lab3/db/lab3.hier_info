@@ -1,0 +1,136 @@
+|CombinedASUC
+Cout1 <= ASU:inst.Cout
+Cin1 => ASU:inst.Cin
+x1[0] => ASU:inst.x[0]
+x1[1] => ASU:inst.x[1]
+x1[2] => ASU:inst.x[2]
+x1[3] => ASU:inst.x[3]
+y1[0] => ASU:inst.y[0]
+y1[1] => ASU:inst.y[1]
+y1[2] => ASU:inst.y[2]
+y1[3] => ASU:inst.y[3]
+ledneg1[7] <= sseg:inst2.ledneg[7]
+ledneg1[6] <= sseg:inst2.ledneg[6]
+ledneg1[5] <= sseg:inst2.ledneg[5]
+ledneg1[4] <= sseg:inst2.ledneg[4]
+ledneg1[3] <= sseg:inst2.ledneg[3]
+ledneg1[2] <= sseg:inst2.ledneg[2]
+ledneg1[1] <= sseg:inst2.ledneg[1]
+leds1[7] <= sseg:inst2.leds[7]
+leds1[6] <= sseg:inst2.leds[6]
+leds1[5] <= sseg:inst2.leds[5]
+leds1[4] <= sseg:inst2.leds[4]
+leds1[3] <= sseg:inst2.leds[3]
+leds1[2] <= sseg:inst2.leds[2]
+leds1[1] <= sseg:inst2.leds[1]
+
+
+|CombinedASUC|ASU:inst
+Cin => Add1.IN10
+Cin => Add3.IN10
+Cin => Sum.OUTPUTSELECT
+Cin => Sum.OUTPUTSELECT
+Cin => Sum.OUTPUTSELECT
+Cin => Sum.OUTPUTSELECT
+Cin => Sum.OUTPUTSELECT
+Cin => neg.OUTPUTSELECT
+x[0] => Add0.IN4
+x[0] => Add2.IN8
+x[0] => LessThan0.IN4
+x[1] => Add0.IN3
+x[1] => Add2.IN7
+x[1] => LessThan0.IN3
+x[2] => Add0.IN2
+x[2] => Add2.IN6
+x[2] => LessThan0.IN2
+x[3] => Add0.IN1
+x[3] => Add2.IN5
+x[3] => LessThan0.IN1
+y[0] => Add0.IN8
+y[0] => LessThan0.IN8
+y[0] => Add2.IN4
+y[1] => Add0.IN7
+y[1] => LessThan0.IN7
+y[1] => Add2.IN3
+y[2] => Add0.IN6
+y[2] => LessThan0.IN6
+y[2] => Add2.IN2
+y[3] => Add0.IN5
+y[3] => LessThan0.IN5
+y[3] => Add2.IN1
+S[0] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+neg <= neg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CombinedASUC|sseg:inst2
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+leds[7] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+ledneg[7] <= neg.DB_MAX_OUTPUT_PORT_TYPE
+ledneg[6] <= <VCC>
+ledneg[5] <= <VCC>
+ledneg[4] <= <VCC>
+ledneg[3] <= <VCC>
+ledneg[2] <= <VCC>
+ledneg[1] <= <VCC>
+neg => ledneg[7].DATAIN
+
+
+|CombinedASUC|C:inst1
+k[0] => l.IN0
+k[0] => l.IN0
+k[0] => l.IN0
+k[1] => l.IN0
+k[1] => l.IN1
+k[2] => l.IN1
+k[2] => l.IN1
+k[2] => l.IN1
+k[2] => l.IN1
+k[2] => l.IN0
+k[3] => l.IN1
+k[3] => l.IN1
+k[3] => l.IN1
+k[3] => l.IN1
+k[3] => l.IN1
+l[0] <= l.DB_MAX_OUTPUT_PORT_TYPE
+l[1] <= l.DB_MAX_OUTPUT_PORT_TYPE
+l[2] <= l.DB_MAX_OUTPUT_PORT_TYPE
+l[3] <= l.DB_MAX_OUTPUT_PORT_TYPE
+
+

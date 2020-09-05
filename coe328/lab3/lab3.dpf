@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="x[3]" source="Pin Planner" >
+		</pin>
+		<pin name="x[0]" source="Pin Planner" >
+		</pin>
+		<pin name="x[1]" source="Pin Planner" >
+		</pin>
+		<pin name="x[2]" source="Pin Planner" >
+		</pin>
+		<pin name="y[0]" source="Pin Planner" >
+		</pin>
+		<pin name="y[1]" source="Pin Planner" >
+		</pin>
+		<pin name="y[2]" source="Pin Planner" >
+		</pin>
+		<pin name="y[3]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[1]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[2]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[3]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[4]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[5]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[6]" source="Pin Planner" >
+		</pin>
+		<pin name="leds[7]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[7]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[4]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[5]" source="Pin Planner" >
+		</pin>
+		<pin name="ledneg[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LED" source="Pin Planner" >
+		</pin>
+		<pin name="Cin" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>
