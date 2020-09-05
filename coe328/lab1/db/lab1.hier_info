@@ -1,0 +1,28 @@
+|lab_1f
+f <= lab_one:inst.f
+w1 => lab_one2:inst1.w1
+w2 => lab_one2:inst1.w2
+w3 => lab_one2:inst1.w3
+w4 => lab_one2:inst1.w4
+x2 => lab_one:inst.x2
+
+
+|lab_1f|lab_one:inst
+x1 => f.IN0
+x2 => f.IN1
+x2 => f.IN0
+x3 => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_1f|lab_one2:inst1
+w1 => g.IN0
+w2 => g.IN1
+w2 => h.IN0
+w3 => g.IN0
+w4 => g.IN1
+w4 => h.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+h <= h.DB_MAX_OUTPUT_PORT_TYPE
+
+

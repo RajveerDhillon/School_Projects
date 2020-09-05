@@ -1,0 +1,30 @@
+|mixed
+f <= lab1:inst.f
+w1 => lab1c:inst1.w1
+w2 => lab1c:inst1.w2
+w3 => lab1c:inst1.w3
+w4 => lab1c:inst1.w4
+x2 => lab1:inst.x2
+
+
+|mixed|lab1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+x2 => inst2.IN0
+x2 => inst.IN1
+x3 => inst1.IN1
+x1 => inst.IN0
+
+
+|mixed|lab1c:inst1
+w1 => g~0.IN0
+w1 => h~0.IN0
+w2 => g~0.IN1
+w2 => h~1.IN0
+w3 => g~1.IN0
+w3 => h~0.IN1
+w4 => g~1.IN1
+w4 => h~1.IN1
+g <= g~2.DB_MAX_OUTPUT_PORT_TYPE
+h <= h~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

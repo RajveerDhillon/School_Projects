@@ -1,0 +1,22 @@
+|C
+k[0] => L.IN0
+k[0] => L.IN0
+k[0] => L.IN0
+k[1] => L.IN1
+k[1] => L.IN0
+k[1] => L.IN0
+k[1] => L.IN1
+k[1] => L.IN1
+k[2] => L.IN1
+k[2] => L.IN0
+k[3] => L.IN1
+k[3] => L.IN1
+k[3] => L.IN1
+k[3] => L.IN1
+k[3] => L.IN1
+L[0] <= L.DB_MAX_OUTPUT_PORT_TYPE
+L[1] <= L.DB_MAX_OUTPUT_PORT_TYPE
+L[2] <= L.DB_MAX_OUTPUT_PORT_TYPE
+L[3] <= L.DB_MAX_OUTPUT_PORT_TYPE
+
+

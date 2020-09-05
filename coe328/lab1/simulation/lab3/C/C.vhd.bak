@@ -1,0 +1,15 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+USE ieee.std_logic_unsigned.all ;
+ENTITY C IS
+PORT ( K0,K1,K2,K3 : IN STD_LOGIC ;
+L2, L1, L0, L3: OUT STD_LOGIC ) ;
+END C ;
+
+ARCHITECTURE Behavior OF C IS
+BEGIN
+L3 <= "0";
+L2 <= ((NOT K0)AND (NOT K1) AND (NOT K2) AND (NOT K3)) OR (K0 AND K1 AND (NOT K2)) OR (K0 AND (NOT K1) AND K2) OR ((NOT K0)AND K1 AND K2);
+L1 <= ((NOT K1)AND K2) OR (K0 AND K1) OR ((NOT K1) AND (NOT K2) AND K3);
+L0 <= (K0 AND K2) OR (K1 AND K2) OR (K0 AND K1 AND (NOT K2)) OR ((NOT K0)AND (NOT K1) AND (NOT K2) AND (NOT K3));
+END Behavior ;
