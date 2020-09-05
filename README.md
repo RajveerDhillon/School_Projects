@@ -1,2 +1,5 @@
 # School_Projects
-All Past School Work I Have Done
+All past University projects I have done.
+Labelled from: Course Code, Title and a small Description.
+
+## Coe 318 Software Systems
