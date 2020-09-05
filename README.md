@@ -60,7 +60,7 @@ Design elements of System-on-Chip with topics on Hardware-Software co-specificat
 
 ## Coe 848 Fundamentals of Data Engineering 
 ### Lab work in SQL on SQLite
-Data mangement using SQL and Non-SQL methods with topics: entity-relation diagrams, relation databases, data definition and manipulation languages, structured data representations formats, development of novel vocabularies and semi-structured data. Lab work was a course project of a Database of Games created by a Company with work done in SQlite Studio and various XML files
+Data mangement using SQL and Non-SQL methods with topics: entity-relation diagrams, relation databases, data definition and manipulation languages, structured data representations formats, development of novel vocabularies and semi-structured data. Lab work was a course project of a Database of Games created by a Company with work done in SQlite Studio, lab 5 done on NetBeans and various XML files.
 
 ## Notes
 Majority of my projects are for Computer Engineering Courses. 
