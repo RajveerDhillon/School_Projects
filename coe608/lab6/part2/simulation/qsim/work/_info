@@ -1,0 +1,88 @@
+m255
+K3
+z0
+13
+cModel Technology
+d/media/USB30FD/lab6.1/simulation/qsim
+vCPU_TEST_Sim
+Z0 !s110 1491787575
+!i10b 1
+!s100 z7X_cST9Z[iGi>1GFJmSG1
+Iz]@P@=WWL4>eM50nQWYU`1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/student2/njegaraj/coe608/past/anu/Lab6/part2/simulation/qsim
+w1491787573
+8CPU_TEST_Sim.vo
+FCPU_TEST_Sim.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1491787575.000000
+!s107 CPU_TEST_Sim.vo|
+!s90 -work|work|CPU_TEST_Sim.vo|
+!i113 1
+Z5 o-work work
+n@c@p@u_@t@e@s@t_@sim
+vCPU_TEST_Sim_vlg_check_tst
+!i10b 1
+!s100 A]KTEQn<2JUD^;@e>bj`>0
+I>bYCnfF<d8jm2=n5^04`l3
+VAN8OL5PC]SYlnbFkPekba3
+Z6 d/home/student2/sgolabia/coe608/Lab6/part2/simulation/qsim
+Z7 w1427810055
+Z8 8CPU_TEST_Sim.vwf.vt
+Z9 FCPU_TEST_Sim.vwf.vt
+L0 61
+Z10 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z11 !s108 1427810062.810556
+Z12 !s107 CPU_TEST_Sim.vwf.vt|
+Z13 !s90 -work|work|CPU_TEST_Sim.vwf.vt|
+!s101 -O0
+Z14 o-work work -O0
+n@c@p@u_@t@e@s@t_@sim_vlg_check_tst
+vCPU_TEST_Sim_vlg_sample_tst
+!i10b 1
+!s100 l<f[V6;cMSheMK`RDBCfj2
+INFaoLdVh[FPkEdEJWMLfX2
+V8I[2ieW7H@BD=24IJ7VZ<3
+R6
+R7
+R8
+R9
+L0 29
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+R14
+n@c@p@u_@t@e@s@t_@sim_vlg_sample_tst
+vCPU_TEST_Sim_vlg_vec_tst
+R0
+!i10b 1
+!s100 LN>AIk2G`GKaRh`^TO:mm2
+I8gRWLnd8BbFYk9fBMjJiK1
+R1
+R2
+w1491787566
+R8
+R9
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+n@c@p@u_@t@e@s@t_@sim_vlg_vec_tst

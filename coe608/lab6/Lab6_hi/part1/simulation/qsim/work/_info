@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/media/USB30FD/reset/simulation/qsim
+vreset_circuit
+Z1 IE?H5mdb9FE0zPJ23I1h>G1
+Z2 VX6PUg_Pk=f7R=Q<O4cblS1
+Z3 dC:\Users\sahib\OneDrive\Documents\coe608\lab6\Lab6_hi\part1\simulation\qsim
+Z4 w1554935588
+Z5 8reset_circuit.vo
+Z6 Freset_circuit.vo
+L0 32
+Z7 OV;L;10.1e;51
+r1
+31
+Z8 !s90 -work|work|reset_circuit.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 [??VU]3]HFFbZe:>^_]cj0
+!s85 0
+Z11 !s108 1554935589.751000
+Z12 !s107 reset_circuit.vo|
+!s101 -O0
+vreset_circuit_vlg_check_tst
+!i10b 1
+!s100 bD_OP1Oc1KWhj;C]I1@020
+IWiEc@9[DI_F6oL]3_Q_g]0
+Z13 VZb6@KVdelz<WBKjZPdQY21
+R3
+Z14 w1554935586
+Z15 8nish_reset_circuit.vwf.vt
+Z16 Fnish_reset_circuit.vwf.vt
+L0 60
+R7
+r1
+!s85 0
+31
+Z17 !s108 1554935589.838000
+Z18 !s107 nish_reset_circuit.vwf.vt|
+Z19 !s90 -work|work|nish_reset_circuit.vwf.vt|
+!s101 -O0
+R9
+vreset_circuit_vlg_sample_tst
+!i10b 1
+!s100 1g2WAFazI7O]OPCGfBBz61
+I;QLOBK6zM7]l8A4_?=cSk3
+Z20 VchRe=FW_oUGW3cVWBH<T[2
+R3
+R14
+R15
+R16
+L0 30
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+vreset_circuit_vlg_vec_tst
+!i10b 1
+!s100 Oo2_LQCZ]5Z<bHTNj`mLQ3
+I5U6AZU]M7Go6P1=`nMz:J3
+Z21 VcKo;kHI`I@LOVUL?n3kh]1
+R3
+R14
+R15
+R16
+Z22 L0 182
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9

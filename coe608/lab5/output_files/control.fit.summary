@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Mar 27 14:56:27 2019
+Quartus II 64-Bit Version : 14.0.2 Build 209 09/17/2014 SJ Full Version
+Revision Name : control
+Top-level Entity Name : control
+Family : Cyclone IV GX
+Device : EP4CGX22CF19C6
+Timing Models : Final
+Total logic elements : 97 / 21,280 ( < 1 % )
+    Total combinational functions : 96 / 21,280 ( < 1 % )
+    Dedicated logic registers : 8 / 21,280 ( < 1 % )
+Total registers : 8
+Total pins : 64 / 167 ( 38 % )
+Total virtual pins : 0
+Total memory bits : 0 / 774,144 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

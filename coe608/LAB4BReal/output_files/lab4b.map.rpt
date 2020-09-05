@@ -1,0 +1,905 @@
+Analysis & Synthesis report for lab4b
+Thu Mar 14 17:29:22 2019
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "mux3_1:IMMUX2"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Mar 14 17:29:22 2019       ;
+; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
+; Revision Name                      ; lab4b                                       ;
+; Top-level Entity Name              ; lab4Bvd                                     ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 14,667                                      ;
+;     Total combinational functions  ; 6,407                                       ;
+;     Dedicated logic registers      ; 8,425                                       ;
+; Total registers                    ; 8425                                        ;
+; Total pins                         ; 326                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; Lab4Bvd            ; lab4b              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; reg1.vhd                         ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/reg1.vhd     ;         ;
+; pc.vhd                           ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/pc.vhd       ;         ;
+; reducer.vhd                      ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/reducer.vhd  ;         ;
+; uze.vhd                          ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/uze.vhd      ;         ;
+; lze.vhd                          ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/lze.vhd      ;         ;
+; data_mem.vhd                     ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/data_mem.vhd ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/alu.vhd      ;         ;
+; mux3_1.vhd                       ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/mux3_1.vhd   ;         ;
+; mux2_1.vhd                       ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/mux2_1.vhd   ;         ;
+; Lab4Bvd.vhd                      ; yes             ; User VHDL File  ; C:/Users/sahib/OneDrive/Documents/coe608/LAB4BReal/Lab4Bvd.vhd  ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 14,667     ;
+;                                             ;            ;
+; Total combinational functions               ; 6407       ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 6010       ;
+;     -- 3 input functions                    ; 310        ;
+;     -- <=2 input functions                  ; 87         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 6327       ;
+;     -- arithmetic mode                      ; 80         ;
+;                                             ;            ;
+; Total registers                             ; 8425       ;
+;     -- Dedicated logic registers            ; 8425       ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 326        ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+; Maximum fan-out node                        ; mClk~input ;
+; Maximum fan-out                             ; 8224       ;
+; Total fan-out                               ; 51081      ;
+; Average fan-out                             ; 3.30       ;
++---------------------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; |lab4Bvd                   ; 6407 (0)          ; 8425 (0)     ; 0           ; 0            ; 0       ; 0         ; 326  ; 0            ; |lab4Bvd                      ; work         ;
+;    |alu:ALU1|              ; 306 (306)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|alu:ALU1             ; work         ;
+;    |data_mem:DATA_MEMORY|  ; 5765 (5765)       ; 8224 (8224)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|data_mem:DATA_MEMORY ; work         ;
+;    |mux2_1:AMUX|           ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux2_1:AMUX          ; work         ;
+;    |mux2_1:BMUX|           ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux2_1:BMUX          ; work         ;
+;    |mux2_1:IMMUX1|         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux2_1:IMMUX1        ; work         ;
+;    |mux2_1:MEMMUX|         ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux2_1:MEMMUX        ; work         ;
+;    |mux3_1:DATAMUX|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux3_1:DATAMUX       ; work         ;
+;    |mux3_1:IMMUX2|         ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|mux3_1:IMMUX2        ; work         ;
+;    |pc:PCounter|           ; 19 (19)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|pc:PCounter          ; work         ;
+;    |reg1:A|                ; 2 (2)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|reg1:A               ; work         ;
+;    |reg1:B|                ; 2 (2)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|reg1:B               ; work         ;
+;    |reg1:IR|               ; 10 (10)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4Bvd|reg1:IR              ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; alu:ALU1|Cout                                       ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|tmpz[0]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[1]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[2]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[3]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[4]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[5]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[6]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[7]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[8]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[9]                                    ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[10]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[11]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[12]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[13]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[14]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[15]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[16]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[17]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[18]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[19]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[20]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[21]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[22]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[23]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[24]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[25]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[26]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[27]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[28]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[29]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[30]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|tmpz[31]                                   ; alu:ALU1|Mux68      ; yes                    ;
+; alu:ALU1|temp[32]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[0]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[1]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[2]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[3]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[4]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[5]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[6]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[7]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[8]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[9]                                    ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[10]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[11]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[12]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[13]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[14]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[15]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[16]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[17]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[18]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[19]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[20]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[21]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[22]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[23]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[24]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[25]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[26]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[27]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[28]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[29]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[30]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; alu:ALU1|temp[31]                                   ; alu:ALU1|Mux1       ; yes                    ;
+; Number of user-specified and inferred latches = 66  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; reg1:IR|data_out[8]~en                 ; Lost fanout                            ;
+; reg1:IR|data_out[9]~en                 ; Lost fanout                            ;
+; reg1:IR|data_out[10]~en                ; Lost fanout                            ;
+; reg1:IR|data_out[11]~en                ; Lost fanout                            ;
+; reg1:IR|data_out[12]~en                ; Lost fanout                            ;
+; reg1:IR|data_out[13]~en                ; Lost fanout                            ;
+; reg1:IR|data_out[14]~en                ; Lost fanout                            ;
+; reg1:IR|data_out[15]~en                ; Lost fanout                            ;
+; pc:PCounter|data_out[31]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[30]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[29]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[28]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[27]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[26]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[25]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[24]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[23]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[22]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[21]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[20]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[19]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[18]~reg0          ; Stuck at GND due to stuck port data_in ;
+; pc:PCounter|data_out[17]~reg0          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 23 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 8425  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8393  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lab4Bvd|data_mem:DATA_MEMORY|data_out[29] ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |lab4Bvd|alu:ALU1|Mux62                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |lab4Bvd|mux3_1:DATAMUX|out0[5]            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |lab4Bvd|mux3_1:IMMUX2|out0[9]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "mux3_1:IMMUX2" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; in2  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 326                         ;
+; cycloneiii_ff         ; 8425                        ;
+;     ENA               ; 8393                        ;
+;     plain             ; 32                          ;
+; cycloneiii_io_obuf    ; 168                         ;
+; cycloneiii_lcell_comb ; 6408                        ;
+;     arith             ; 80                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 65                          ;
+;     normal            ; 6328                        ;
+;         0 data inputs ; 3                           ;
+;         2 data inputs ; 70                          ;
+;         3 data inputs ; 245                         ;
+;         4 data inputs ; 6010                        ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 7.27                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:19     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
+    Info: Processing started: Thu Mar 14 17:29:00 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4b -c lab4b
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file reg1.vhd
+    Info (12022): Found design unit 1: reg1-description
+    Info (12023): Found entity 1: reg1
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: pc-description
+    Info (12023): Found entity 1: pc
+Info (12021): Found 2 design units, including 1 entities, in source file reducer.vhd
+    Info (12022): Found design unit 1: reducer-description
+    Info (12023): Found entity 1: reducer
+Info (12021): Found 2 design units, including 1 entities, in source file uze.vhd
+    Info (12022): Found design unit 1: uze-description
+    Info (12023): Found entity 1: uze
+Info (12021): Found 2 design units, including 1 entities, in source file lze.vhd
+    Info (12022): Found design unit 1: lze-description
+    Info (12023): Found entity 1: lze
+Info (12021): Found 2 design units, including 1 entities, in source file data_mem.vhd
+    Info (12022): Found design unit 1: data_mem-Description
+    Info (12023): Found entity 1: data_mem
+Info (12021): Found 1 design units, including 1 entities, in source file lab4b.bdf
+    Info (12023): Found entity 1: lab4b
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-description
+    Info (12023): Found entity 1: alu
+Info (12021): Found 2 design units, including 1 entities, in source file mux3_1.vhd
+    Info (12022): Found design unit 1: mux3_1-description
+    Info (12023): Found entity 1: mux3_1
+Info (12021): Found 2 design units, including 1 entities, in source file mux2_1.vhd
+    Info (12022): Found design unit 1: mux2_1-description
+    Info (12023): Found entity 1: mux2_1
+Info (12021): Found 2 design units, including 1 entities, in source file lab4bvd.vhd
+    Info (12022): Found design unit 1: Lab4Bvd-description
+    Info (12023): Found entity 1: lab4Bvd
+Info (12127): Elaborating entity "Lab4Bvd" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Lab4Bvd.vhd(123): used implicit default value for signal "Out_IR_wire" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "reg1" for hierarchy "reg1:IR"
+Info (12128): Elaborating entity "pc" for hierarchy "pc:PCounter"
+Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:DATA_MEMORY"
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU1"
+Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(28): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(30): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(31): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(42): signal "tmpz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at alu.vhd(21): inferring latch(es) for signal or variable "tmpz", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alu.vhd(21): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alu.vhd(21): inferring latch(es) for signal or variable "Cout", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Cout" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[0]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[1]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[2]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[3]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[4]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[5]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[6]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[7]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[8]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[9]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[10]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[11]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[12]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[13]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[14]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[15]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[16]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[17]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[18]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[19]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[20]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[21]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[22]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[23]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[24]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[25]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[26]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[27]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[28]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[29]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[30]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[31]" at alu.vhd(21)
+Info (10041): Inferred latch for "temp[32]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[0]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[1]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[2]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[3]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[4]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[5]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[6]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[7]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[8]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[9]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[10]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[11]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[12]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[13]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[14]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[15]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[16]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[17]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[18]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[19]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[20]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[21]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[22]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[23]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[24]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[25]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[26]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[27]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[28]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[29]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[30]" at alu.vhd(21)
+Info (10041): Inferred latch for "tmpz[31]" at alu.vhd(21)
+Info (12128): Elaborating entity "lze" for hierarchy "lze:LZ"
+Info (12128): Elaborating entity "uze" for hierarchy "uze:UZ"
+Info (12128): Elaborating entity "reducer" for hierarchy "reducer:RED"
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:AMUX"
+Info (12128): Elaborating entity "mux3_1" for hierarchy "mux3_1:IMMUX2"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[15]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[18]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[19]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[20]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[21]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[22]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[23]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[24]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[25]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[26]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[27]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[28]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[29]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[30]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "mux3_1:IMMUX2|out0[31]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "reg1:IR|data_out[15]" feeding internal logic into a wire
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "data_mem:DATA_MEMORY|matrix" is uninferred due to asynchronous read logic
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[0]" to the node "mux2_1:MEMMUX|out0[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[1]" to the node "mux2_1:MEMMUX|out0[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[2]" to the node "mux2_1:MEMMUX|out0[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[3]" to the node "mux2_1:MEMMUX|out0[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[4]" to the node "mux2_1:MEMMUX|out0[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[5]" to the node "mux2_1:MEMMUX|out0[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[6]" to the node "mux2_1:MEMMUX|out0[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[7]" to the node "mux2_1:MEMMUX|out0[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[8]" to the node "mux2_1:MEMMUX|out0[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[9]" to the node "mux2_1:MEMMUX|out0[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[10]" to the node "mux2_1:MEMMUX|out0[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[11]" to the node "mux2_1:MEMMUX|out0[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[12]" to the node "mux2_1:MEMMUX|out0[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[13]" to the node "mux2_1:MEMMUX|out0[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[14]" to the node "mux2_1:MEMMUX|out0[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[15]" to the node "mux2_1:MEMMUX|out0[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[16]" to the node "mux2_1:MEMMUX|out0[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[17]" to the node "mux2_1:MEMMUX|out0[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[18]" to the node "mux2_1:MEMMUX|out0[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[19]" to the node "mux2_1:MEMMUX|out0[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[20]" to the node "mux2_1:MEMMUX|out0[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[21]" to the node "mux2_1:MEMMUX|out0[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[22]" to the node "mux2_1:MEMMUX|out0[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[23]" to the node "mux2_1:MEMMUX|out0[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[24]" to the node "mux2_1:MEMMUX|out0[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[25]" to the node "mux2_1:MEMMUX|out0[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[26]" to the node "mux2_1:MEMMUX|out0[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[27]" to the node "mux2_1:MEMMUX|out0[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[28]" to the node "mux2_1:MEMMUX|out0[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[29]" to the node "mux2_1:MEMMUX|out0[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[30]" to the node "mux2_1:MEMMUX|out0[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:A|data_out[31]" to the node "mux2_1:MEMMUX|out0[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[0]" to the node "mux2_1:MEMMUX|out0[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[1]" to the node "mux2_1:MEMMUX|out0[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[2]" to the node "mux2_1:MEMMUX|out0[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[3]" to the node "mux2_1:MEMMUX|out0[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[4]" to the node "mux2_1:MEMMUX|out0[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[5]" to the node "mux2_1:MEMMUX|out0[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[6]" to the node "mux2_1:MEMMUX|out0[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[7]" to the node "mux2_1:MEMMUX|out0[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[8]" to the node "mux2_1:MEMMUX|out0[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[9]" to the node "mux2_1:MEMMUX|out0[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[10]" to the node "mux2_1:MEMMUX|out0[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[11]" to the node "mux2_1:MEMMUX|out0[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[12]" to the node "mux2_1:MEMMUX|out0[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[13]" to the node "mux2_1:MEMMUX|out0[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[14]" to the node "mux2_1:MEMMUX|out0[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[15]" to the node "mux2_1:MEMMUX|out0[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[16]" to the node "mux2_1:MEMMUX|out0[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[17]" to the node "mux2_1:MEMMUX|out0[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[18]" to the node "mux2_1:MEMMUX|out0[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[19]" to the node "mux2_1:MEMMUX|out0[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[20]" to the node "mux2_1:MEMMUX|out0[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[21]" to the node "mux2_1:MEMMUX|out0[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[22]" to the node "mux2_1:MEMMUX|out0[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[23]" to the node "mux2_1:MEMMUX|out0[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[24]" to the node "mux2_1:MEMMUX|out0[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[25]" to the node "mux2_1:MEMMUX|out0[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[26]" to the node "mux2_1:MEMMUX|out0[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[27]" to the node "mux2_1:MEMMUX|out0[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[28]" to the node "mux2_1:MEMMUX|out0[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[29]" to the node "mux2_1:MEMMUX|out0[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[30]" to the node "mux2_1:MEMMUX|out0[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:B|data_out[31]" to the node "mux2_1:MEMMUX|out0[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[0]" to the node "reg1:IR|data_out[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[1]" to the node "reg1:IR|data_out[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[2]" to the node "reg1:IR|data_out[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[3]" to the node "reg1:IR|data_out[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[4]" to the node "reg1:IR|data_out[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[5]" to the node "reg1:IR|data_out[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[6]" to the node "reg1:IR|data_out[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[7]" to the node "reg1:IR|data_out[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[8]" to the node "reg1:IR|data_out[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[9]" to the node "reg1:IR|data_out[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[10]" to the node "reg1:IR|data_out[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[11]" to the node "reg1:IR|data_out[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[12]" to the node "reg1:IR|data_out[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[13]" to the node "reg1:IR|data_out[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[14]" to the node "reg1:IR|data_out[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[15]" to the node "reg1:IR|data_out[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[16]" to the node "mux2_1:AMUX|out0[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[17]" to the node "mux2_1:AMUX|out0[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[18]" to the node "mux2_1:AMUX|out0[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[19]" to the node "mux2_1:AMUX|out0[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[20]" to the node "mux2_1:AMUX|out0[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[21]" to the node "mux2_1:AMUX|out0[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[22]" to the node "mux2_1:AMUX|out0[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[23]" to the node "mux2_1:AMUX|out0[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[24]" to the node "mux2_1:AMUX|out0[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[25]" to the node "mux2_1:AMUX|out0[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[26]" to the node "mux2_1:AMUX|out0[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[27]" to the node "mux2_1:AMUX|out0[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[28]" to the node "mux2_1:AMUX|out0[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[29]" to the node "mux2_1:AMUX|out0[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[30]" to the node "mux2_1:AMUX|out0[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "mux3_1:DATAMUX|out0[31]" to the node "mux2_1:AMUX|out0[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[0]" to the node "mux2_1:IMMUX1|out0[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[1]" to the node "mux2_1:IMMUX1|out0[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[2]" to the node "mux2_1:IMMUX1|out0[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[3]" to the node "mux2_1:IMMUX1|out0[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[4]" to the node "mux2_1:IMMUX1|out0[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[5]" to the node "mux2_1:IMMUX1|out0[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[6]" to the node "mux2_1:IMMUX1|out0[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "reg1:IR|data_out[7]" to the node "mux2_1:IMMUX1|out0[23]" into an OR gate
+Warning (13012): Latch alu:ALU1|tmpz[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13012): Latch alu:ALU1|tmpz[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Op[1]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Out_IR[0]" is stuck at GND
+    Warning (13410): Pin "Out_IR[1]" is stuck at GND
+    Warning (13410): Pin "Out_IR[2]" is stuck at GND
+    Warning (13410): Pin "Out_IR[3]" is stuck at GND
+    Warning (13410): Pin "Out_IR[4]" is stuck at GND
+    Warning (13410): Pin "Out_IR[5]" is stuck at GND
+    Warning (13410): Pin "Out_IR[6]" is stuck at GND
+    Warning (13410): Pin "Out_IR[7]" is stuck at GND
+    Warning (13410): Pin "Out_IR[8]" is stuck at GND
+    Warning (13410): Pin "Out_IR[9]" is stuck at GND
+    Warning (13410): Pin "Out_IR[10]" is stuck at GND
+    Warning (13410): Pin "Out_IR[11]" is stuck at GND
+    Warning (13410): Pin "Out_IR[12]" is stuck at GND
+    Warning (13410): Pin "Out_IR[13]" is stuck at GND
+    Warning (13410): Pin "Out_IR[14]" is stuck at GND
+    Warning (13410): Pin "Out_IR[15]" is stuck at GND
+    Warning (13410): Pin "Out_IR[16]" is stuck at GND
+    Warning (13410): Pin "Out_IR[17]" is stuck at GND
+    Warning (13410): Pin "Out_IR[18]" is stuck at GND
+    Warning (13410): Pin "Out_IR[19]" is stuck at GND
+    Warning (13410): Pin "Out_IR[20]" is stuck at GND
+    Warning (13410): Pin "Out_IR[21]" is stuck at GND
+    Warning (13410): Pin "Out_IR[22]" is stuck at GND
+    Warning (13410): Pin "Out_IR[23]" is stuck at GND
+    Warning (13410): Pin "Out_IR[24]" is stuck at GND
+    Warning (13410): Pin "Out_IR[25]" is stuck at GND
+    Warning (13410): Pin "Out_IR[26]" is stuck at GND
+    Warning (13410): Pin "Out_IR[27]" is stuck at GND
+    Warning (13410): Pin "Out_IR[28]" is stuck at GND
+    Warning (13410): Pin "Out_IR[29]" is stuck at GND
+    Warning (13410): Pin "Out_IR[30]" is stuck at GND
+    Warning (13410): Pin "Out_IR[31]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Clr_C"
+    Warning (15610): No output dependent on input pin "Ld_C"
+    Warning (15610): No output dependent on input pin "Clr_Z"
+    Warning (15610): No output dependent on input pin "Ld_Z"
+Info (21057): Implemented 15043 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 60 input pins
+    Info (21059): Implemented 266 output pins
+    Info (21061): Implemented 14717 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 353 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Thu Mar 14 17:29:22 2019
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:22
+
+

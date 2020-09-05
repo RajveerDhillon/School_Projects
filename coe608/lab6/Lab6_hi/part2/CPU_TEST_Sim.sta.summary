@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'cpuClk'
+Slack : -6.927
+TNS   : -921.009
+
+Type  : Slow 1200mV 85C Model Setup 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : -6.214
+TNS   : -292.831
+
+Type  : Slow 1200mV 85C Model Setup 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : -5.883
+TNS   : -50.632
+
+Type  : Slow 1200mV 85C Model Setup 'memClk'
+Slack : -5.624
+TNS   : -153.738
+
+Type  : Slow 1200mV 85C Model Hold 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'memClk'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cpuClk'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.702
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'cpuClk'
+Slack : -7.366
+TNS   : -477.956
+
+Type  : Slow 1200mV 85C Model Removal 'cpuClk'
+Slack : 0.621
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -224.143
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -65.541
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'cpuClk'
+Slack : -6.278
+TNS   : -827.990
+
+Type  : Slow 1200mV 0C Model Setup 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : -5.576
+TNS   : -266.245
+
+Type  : Slow 1200mV 0C Model Setup 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : -5.415
+TNS   : -46.398
+
+Type  : Slow 1200mV 0C Model Setup 'memClk'
+Slack : -5.115
+TNS   : -138.544
+
+Type  : Slow 1200mV 0C Model Hold 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'cpuClk'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'memClk'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'cpuClk'
+Slack : -6.586
+TNS   : -427.869
+
+Type  : Slow 1200mV 0C Model Removal 'cpuClk'
+Slack : 0.565
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -224.099
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -65.233
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : -3.024
+TNS   : -138.365
+
+Type  : Fast 1200mV 0C Model Setup 'cpuClk'
+Slack : -2.787
+TNS   : -343.406
+
+Type  : Fast 1200mV 0C Model Setup 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : -2.425
+TNS   : -19.814
+
+Type  : Fast 1200mV 0C Model Setup 'memClk'
+Slack : -2.147
+TNS   : -45.320
+
+Type  : Fast 1200mV 0C Model Hold 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : -0.089
+TNS   : -0.136
+
+Type  : Fast 1200mV 0C Model Hold 'cpuClk'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'memClk'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.483
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'cpuClk'
+Slack : -2.940
+TNS   : -191.104
+
+Type  : Fast 1200mV 0C Model Removal 'cpuClk'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -184.540
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -48.387
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|reset_circuit:R1|Enable_PD'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|control:C1|ALU_op[0]'
+Slack : 0.325
+TNS   : 0.000
+
+------------------------------------------------------------
