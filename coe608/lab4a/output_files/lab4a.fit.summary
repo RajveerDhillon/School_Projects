@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Mar  6 14:48:37 2019
+Quartus II 64-Bit Version : 14.0.2 Build 209 09/17/2014 SJ Full Version
+Revision Name : lab4a
+Top-level Entity Name : data_mem
+Family : Cyclone IV E
+Device : EP4CE10F17C6
+Timing Models : Final
+Total logic elements : 9,877 / 10,320 ( 96 % )
+    Total combinational functions : 5,766 / 10,320 ( 56 % )
+    Dedicated logic registers : 8,224 / 10,320 ( 80 % )
+Total registers : 8224
+Total pins : 75 / 180 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

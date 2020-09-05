@@ -1,0 +1,53 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
+USE ieee.std_logic_signed.all;
+
+ENTITY adder32 IS
+PORT( Ain, Bin			: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		Cin				: IN STD_LOGIC;
+		Cout				: OUT STD_LOGIC;
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END adder32;
+
+ARCHITECTURE descritption OF adder32 IS
+COMPONENT full_adder IS
+PORT( a, b, Cin		: IN STD_LOGIC;
+		Cout, sum 		: OUT STD_LOGIC);
+END COMPONENT;
+signal temp				: STD_LOGIC_VECTOR(30 DOWNTO 0);
+
+BEGIN
+	p1:	fulladder port map(Ain(0), Bin(0), Cin, temp(0), result(0));
+	p2:	fulladder port map(Ain(1), Bin(1), temp(0), temp(1), result(1));
+	p3:	fulladder port map(Ain(2), Bin(2), temp(1), temp(2), result(2));
+	p4:	fulladder port map(Ain(3), Bin(3), temp(2), temp(3), result(3));
+	p5:	fulladder port map(Ain(4), Bin(4), temp(3), temp(4), result(4));
+	p6:	fulladder port map(Ain(5), Bin(5), temp(4), temp(5), result(5));
+	p7:	fulladder port map(Ain(6), Bin(6), temp(5), temp(6), result(6));
+	p8:	fulladder port map(Ain(7), Bin(7), temp(6), temp(7), result(7));
+	p9:	fulladder port map(Ain(8), Bin(8), temp(7), temp(8), result(8));
+	p10:	fulladder port map(Ain(9), Bin(9), temp(8), temp(9), result(9));
+	p11:	fulladder port map(Ain(10), Bin(10), temp(9), temp(10), result(10));
+	p12:	fulladder port map(Ain(11), Bin(11), temp(10), temp(11), result(11));
+	p13:	fulladder port map(Ain(12), Bin(12), temp(11), temp(12), result(12));
+	p14:	fulladder port map(Ain(13), Bin(13), temp(12), temp(13), result(13));
+	p15:	fulladder port map(Ain(14), Bin(14), temp(13), temp(14), result(14));
+	p16:	fulladder port map(Ain(15), Bin(15), temp(14), temp(15), result(15));
+	p17:	fulladder port map(Ain(16), Bin(16), temp(15), temp(16), result(16));
+	p18:	fulladder port map(Ain(17), Bin(17), temp(16), temp(17), result(17));
+	p19:	fulladder port map(Ain(18), Bin(18), temp(17), temp(18), result(18));
+	p20:	fulladder port map(Ain(19), Bin(19), temp(18), temp(19), result(19));
+	p21:	fulladder port map(Ain(20), Bin(20), temp(19), temp(20), result(20));
+	p22:	fulladder port map(Ain(21), Bin(21), temp(20), temp(21), result(21));
+	p23:	fulladder port map(Ain(22), Bin(22), temp(21), temp(22), result(22));
+	p24:	fulladder port map(Ain(23), Bin(23), temp(22), temp(23), result(23));
+	p25:	fulladder port map(Ain(24), Bin(24), temp(23), temp(24), result(24));
+	p26:	fulladder port map(Ain(25), Bin(25), temp(24), temp(25), result(25));
+	p27:	fulladder port map(Ain(26), Bin(26), temp(25), temp(26), result(26));
+	p28:	fulladder port map(Ain(27), Bin(27), temp(26), temp(27), result(27));
+	p29:	fulladder port map(Ain(28), Bin(28), temp(27), temp(28), result(28));
+	p30:	fulladder port map(Ain(29), Bin(29), temp(28), temp(29), result(29));
+	p31:	fulladder port map(Ain(30), Bin(30), temp(29), temp(30), result(30));
+	p32:	fulladder port map(Ain(31), Bin(31), temp(30), Cout, result(31));
+END descritption;

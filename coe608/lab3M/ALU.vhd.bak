@@ -1,0 +1,122 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.ALL; 
+USE ieee.std_logic_signed.all;
+
+ENTITY ALU IS
+PORT( a, b			: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		op				: IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		result		: INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		carry			: OUT STD_LOGIC;
+		zero			: OUT STD_LOGIC);
+END ALU;
+
+ARCHITECTURE description OF ALU IS
+--Internal
+
+--AND32
+COMPONENT and32 IS
+PORT( Ain, Bin			: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--OR32
+COMPONENT or32 IS
+PORT( Ain, Bin			: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--Adder
+
+COMPONENT adder32 IS
+PORT( Ain, Bin			: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		Cin				: IN STD_LOGIC;
+		Cout				: OUT STD_LOGIC;
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--left shift
+COMPONENT leftSH IS
+PORT( Ain				: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--right shift
+COMPONENT rightSH IS
+PORT( Ain				: IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+		result			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--mux8_1
+COMPONENT mux8_1 IS
+PORT( x0, x1, x2, x3, x4, x5, x6, x7	: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		s											: IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		y											: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--mux2_1
+COMPONENT mux2_1 IS
+PORT( x0, x1		: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		s				: IN STD_LOGIC;
+		y				: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+--no32
+
+COMPONENT no32 IS
+PORT( x			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+		Y			: STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+--Internal wires
+SIGNAL andR			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL orR			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL addR			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL leftR		: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL rightR		: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL negR			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL notR			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+BEGIN
+--connect mux8_1
+mux1: mux8_1 PORT MAP(x0 => andR,
+							 x1 => orR,
+							 x2 => addR
+							 x3 => "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+							 x4 => leftR,
+							 x5 => rightR,
+							 x6 => addR,
+							 x7 => "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+							 s  => op
+							 y  => result);
+
+--connect adder32
+adder1: adder32 PORT MAP( Ain  	=> a,
+								  Bin  	=> b,
+								  Cin  	=> op(2),
+								  Cout 	=> carry,
+								  result => adderR);
+--connect and32
+and1: and32 PORT MAP (a, b, andR);
+
+--connect or32
+or1: or32 PORT MAP(a, b, orR);
+
+--connect leftSH
+leftSH1: leftSH PORT MAP(a, leftR);
+
+--connect rightSH
+rightSH1: rightSH PORT MAP(a, rightR);
+
+--connect negative decider mux2_1
+negMux: mux2_1 PORT MAP( x0  => b,
+								 x1  => notR
+								 s   => op(2),
+								 y   => negR);
+
+--connect not gate
+notgate: no32 PORT MAP(B, notR);
+
+--zero flag
+zero <= NOT(result(0) OR result(1) OR result(2) OR result(3) OR result(4) OR result(5) OR result(6) OR result(7) OR result(8) OR result(9) OR result(10) OR result(11) OR result(12) OR result(13) OR result(14) OR result(15) OR result(16) OR result(17) OR result(18) OR result(19) OR result(20) OR result(21) OR result(22) OR result(23) OR result(24) OR  result(25) OR result(26) OR result(27) OR result(28) OR result(29) OR result(30) OR result(31)); 
+
+END description;

@@ -1,0 +1,751 @@
+$comment
+	File created using the following command:
+		vcd file lab3.msim.vcd -direction
+$end
+$date
+	Wed Feb 13 14:44:38 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module ALU_vlg_vec_tst $end
+$var reg 32 ! a [31:0] $end
+$var reg 32 " b [31:0] $end
+$var reg 3 # op [2:0] $end
+$var reg 32 $ treg_result [31:0] $end
+$var wire 1 % carry $end
+$var wire 1 & result [31] $end
+$var wire 1 ' result [30] $end
+$var wire 1 ( result [29] $end
+$var wire 1 ) result [28] $end
+$var wire 1 * result [27] $end
+$var wire 1 + result [26] $end
+$var wire 1 , result [25] $end
+$var wire 1 - result [24] $end
+$var wire 1 . result [23] $end
+$var wire 1 / result [22] $end
+$var wire 1 0 result [21] $end
+$var wire 1 1 result [20] $end
+$var wire 1 2 result [19] $end
+$var wire 1 3 result [18] $end
+$var wire 1 4 result [17] $end
+$var wire 1 5 result [16] $end
+$var wire 1 6 result [15] $end
+$var wire 1 7 result [14] $end
+$var wire 1 8 result [13] $end
+$var wire 1 9 result [12] $end
+$var wire 1 : result [11] $end
+$var wire 1 ; result [10] $end
+$var wire 1 < result [9] $end
+$var wire 1 = result [8] $end
+$var wire 1 > result [7] $end
+$var wire 1 ? result [6] $end
+$var wire 1 @ result [5] $end
+$var wire 1 A result [4] $end
+$var wire 1 B result [3] $end
+$var wire 1 C result [2] $end
+$var wire 1 D result [1] $end
+$var wire 1 E result [0] $end
+$var wire 1 F zero $end
+$var wire 1 G sampler $end
+$scope module i1 $end
+$var wire 1 H gnd $end
+$var wire 1 I vcc $end
+$var wire 1 J unknown $end
+$var tri1 1 K devclrn $end
+$var tri1 1 L devpor $end
+$var tri1 1 M devoe $end
+$var wire 1 N result[0]~input_o $end
+$var wire 1 O result[1]~input_o $end
+$var wire 1 P result[2]~input_o $end
+$var wire 1 Q result[3]~input_o $end
+$var wire 1 R result[4]~input_o $end
+$var wire 1 S result[5]~input_o $end
+$var wire 1 T result[6]~input_o $end
+$var wire 1 U result[7]~input_o $end
+$var wire 1 V result[8]~input_o $end
+$var wire 1 W result[9]~input_o $end
+$var wire 1 X result[10]~input_o $end
+$var wire 1 Y result[11]~input_o $end
+$var wire 1 Z result[12]~input_o $end
+$var wire 1 [ result[13]~input_o $end
+$var wire 1 \ result[14]~input_o $end
+$var wire 1 ] result[15]~input_o $end
+$var wire 1 ^ result[16]~input_o $end
+$var wire 1 _ result[17]~input_o $end
+$var wire 1 ` result[18]~input_o $end
+$var wire 1 a result[19]~input_o $end
+$var wire 1 b result[20]~input_o $end
+$var wire 1 c result[21]~input_o $end
+$var wire 1 d result[22]~input_o $end
+$var wire 1 e result[23]~input_o $end
+$var wire 1 f result[24]~input_o $end
+$var wire 1 g result[25]~input_o $end
+$var wire 1 h result[26]~input_o $end
+$var wire 1 i result[27]~input_o $end
+$var wire 1 j result[28]~input_o $end
+$var wire 1 k result[29]~input_o $end
+$var wire 1 l result[30]~input_o $end
+$var wire 1 m result[31]~input_o $end
+$var wire 1 n result[0]~output_o $end
+$var wire 1 o result[1]~output_o $end
+$var wire 1 p result[2]~output_o $end
+$var wire 1 q result[3]~output_o $end
+$var wire 1 r result[4]~output_o $end
+$var wire 1 s result[5]~output_o $end
+$var wire 1 t result[6]~output_o $end
+$var wire 1 u result[7]~output_o $end
+$var wire 1 v result[8]~output_o $end
+$var wire 1 w result[9]~output_o $end
+$var wire 1 x result[10]~output_o $end
+$var wire 1 y result[11]~output_o $end
+$var wire 1 z result[12]~output_o $end
+$var wire 1 { result[13]~output_o $end
+$var wire 1 | result[14]~output_o $end
+$var wire 1 } result[15]~output_o $end
+$var wire 1 ~ result[16]~output_o $end
+$var wire 1 !! result[17]~output_o $end
+$var wire 1 "! result[18]~output_o $end
+$var wire 1 #! result[19]~output_o $end
+$var wire 1 $! result[20]~output_o $end
+$var wire 1 %! result[21]~output_o $end
+$var wire 1 &! result[22]~output_o $end
+$var wire 1 '! result[23]~output_o $end
+$var wire 1 (! result[24]~output_o $end
+$var wire 1 )! result[25]~output_o $end
+$var wire 1 *! result[26]~output_o $end
+$var wire 1 +! result[27]~output_o $end
+$var wire 1 ,! result[28]~output_o $end
+$var wire 1 -! result[29]~output_o $end
+$var wire 1 .! result[30]~output_o $end
+$var wire 1 /! result[31]~output_o $end
+$var wire 1 0! carry~output_o $end
+$var wire 1 1! zero~output_o $end
+$var wire 1 2! op[0]~input_o $end
+$var wire 1 3! a[0]~input_o $end
+$var wire 1 4! b[0]~input_o $end
+$var wire 1 5! op[2]~input_o $end
+$var wire 1 6! mux1|Mux31~0_combout $end
+$var wire 1 7! a[1]~input_o $end
+$var wire 1 8! op[1]~input_o $end
+$var wire 1 9! mux1|Mux31~1_combout $end
+$var wire 1 :! mux1|Mux31~2_combout $end
+$var wire 1 ;! a[2]~input_o $end
+$var wire 1 <! mux1|Mux30~0_combout $end
+$var wire 1 =! b[1]~input_o $end
+$var wire 1 >! adder1|p1|Cout~0_combout $end
+$var wire 1 ?! mux1|Mux30~1_combout $end
+$var wire 1 @! mux1|Mux30~2_combout $end
+$var wire 1 A! mux1|Mux30~3_combout $end
+$var wire 1 B! a[3]~input_o $end
+$var wire 1 C! mux1|Mux29~0_combout $end
+$var wire 1 D! adder1|p2|Cout~0_combout $end
+$var wire 1 E! mux1|Mux29~1_combout $end
+$var wire 1 F! b[2]~input_o $end
+$var wire 1 G! mux1|Mux29~2_combout $end
+$var wire 1 H! mux1|Mux29~3_combout $end
+$var wire 1 I! adder1|p3|Cout~0_combout $end
+$var wire 1 J! mux1|Mux28~1_combout $end
+$var wire 1 K! b[3]~input_o $end
+$var wire 1 L! mux1|Mux28~2_combout $end
+$var wire 1 M! a[4]~input_o $end
+$var wire 1 N! mux1|Mux28~0_combout $end
+$var wire 1 O! mux1|Mux28~3_combout $end
+$var wire 1 P! adder1|p4|Cout~0_combout $end
+$var wire 1 Q! mux1|Mux27~1_combout $end
+$var wire 1 R! b[4]~input_o $end
+$var wire 1 S! mux1|Mux27~2_combout $end
+$var wire 1 T! a[5]~input_o $end
+$var wire 1 U! mux1|Mux27~0_combout $end
+$var wire 1 V! mux1|Mux27~3_combout $end
+$var wire 1 W! adder1|p5|Cout~0_combout $end
+$var wire 1 X! mux1|Mux26~1_combout $end
+$var wire 1 Y! b[5]~input_o $end
+$var wire 1 Z! mux1|Mux26~2_combout $end
+$var wire 1 [! a[6]~input_o $end
+$var wire 1 \! mux1|Mux26~0_combout $end
+$var wire 1 ]! mux1|Mux26~3_combout $end
+$var wire 1 ^! adder1|p6|Cout~0_combout $end
+$var wire 1 _! mux1|Mux25~1_combout $end
+$var wire 1 `! b[6]~input_o $end
+$var wire 1 a! mux1|Mux25~2_combout $end
+$var wire 1 b! a[7]~input_o $end
+$var wire 1 c! mux1|Mux25~0_combout $end
+$var wire 1 d! mux1|Mux25~3_combout $end
+$var wire 1 e! a[8]~input_o $end
+$var wire 1 f! mux1|Mux24~0_combout $end
+$var wire 1 g! adder1|p7|Cout~0_combout $end
+$var wire 1 h! mux1|Mux24~1_combout $end
+$var wire 1 i! b[7]~input_o $end
+$var wire 1 j! mux1|Mux24~2_combout $end
+$var wire 1 k! mux1|Mux24~3_combout $end
+$var wire 1 l! adder1|p8|Cout~0_combout $end
+$var wire 1 m! mux1|Mux23~1_combout $end
+$var wire 1 n! b[8]~input_o $end
+$var wire 1 o! mux1|Mux23~2_combout $end
+$var wire 1 p! a[9]~input_o $end
+$var wire 1 q! mux1|Mux23~0_combout $end
+$var wire 1 r! mux1|Mux23~3_combout $end
+$var wire 1 s! adder1|p9|Cout~0_combout $end
+$var wire 1 t! mux1|Mux22~1_combout $end
+$var wire 1 u! b[9]~input_o $end
+$var wire 1 v! mux1|Mux22~2_combout $end
+$var wire 1 w! a[10]~input_o $end
+$var wire 1 x! mux1|Mux22~0_combout $end
+$var wire 1 y! mux1|Mux22~3_combout $end
+$var wire 1 z! adder1|p10|Cout~0_combout $end
+$var wire 1 {! mux1|Mux21~1_combout $end
+$var wire 1 |! b[10]~input_o $end
+$var wire 1 }! mux1|Mux21~2_combout $end
+$var wire 1 ~! a[11]~input_o $end
+$var wire 1 !" mux1|Mux21~0_combout $end
+$var wire 1 "" mux1|Mux21~3_combout $end
+$var wire 1 #" a[12]~input_o $end
+$var wire 1 $" mux1|Mux20~0_combout $end
+$var wire 1 %" b[11]~input_o $end
+$var wire 1 &" adder1|p11|Cout~0_combout $end
+$var wire 1 '" mux1|Mux20~1_combout $end
+$var wire 1 (" mux1|Mux20~2_combout $end
+$var wire 1 )" mux1|Mux20~3_combout $end
+$var wire 1 *" a[13]~input_o $end
+$var wire 1 +" mux1|Mux19~0_combout $end
+$var wire 1 ," adder1|p12|Cout~0_combout $end
+$var wire 1 -" mux1|Mux19~1_combout $end
+$var wire 1 ." b[12]~input_o $end
+$var wire 1 /" mux1|Mux19~2_combout $end
+$var wire 1 0" mux1|Mux19~3_combout $end
+$var wire 1 1" adder1|p13|Cout~0_combout $end
+$var wire 1 2" mux1|Mux18~1_combout $end
+$var wire 1 3" b[13]~input_o $end
+$var wire 1 4" mux1|Mux18~2_combout $end
+$var wire 1 5" a[14]~input_o $end
+$var wire 1 6" mux1|Mux18~0_combout $end
+$var wire 1 7" mux1|Mux18~3_combout $end
+$var wire 1 8" a[15]~input_o $end
+$var wire 1 9" mux1|Mux17~0_combout $end
+$var wire 1 :" adder1|p14|Cout~0_combout $end
+$var wire 1 ;" mux1|Mux17~1_combout $end
+$var wire 1 <" b[14]~input_o $end
+$var wire 1 =" mux1|Mux17~2_combout $end
+$var wire 1 >" mux1|Mux17~3_combout $end
+$var wire 1 ?" a[16]~input_o $end
+$var wire 1 @" mux1|Mux16~0_combout $end
+$var wire 1 A" adder1|p15|Cout~0_combout $end
+$var wire 1 B" mux1|Mux16~1_combout $end
+$var wire 1 C" b[15]~input_o $end
+$var wire 1 D" mux1|Mux16~2_combout $end
+$var wire 1 E" mux1|Mux16~3_combout $end
+$var wire 1 F" adder1|p16|Cout~0_combout $end
+$var wire 1 G" mux1|Mux15~1_combout $end
+$var wire 1 H" b[16]~input_o $end
+$var wire 1 I" mux1|Mux15~2_combout $end
+$var wire 1 J" a[17]~input_o $end
+$var wire 1 K" mux1|Mux15~0_combout $end
+$var wire 1 L" mux1|Mux15~3_combout $end
+$var wire 1 M" a[18]~input_o $end
+$var wire 1 N" mux1|Mux14~0_combout $end
+$var wire 1 O" b[17]~input_o $end
+$var wire 1 P" adder1|p17|Cout~0_combout $end
+$var wire 1 Q" mux1|Mux14~1_combout $end
+$var wire 1 R" mux1|Mux14~2_combout $end
+$var wire 1 S" mux1|Mux14~3_combout $end
+$var wire 1 T" adder1|p18|Cout~0_combout $end
+$var wire 1 U" mux1|Mux13~1_combout $end
+$var wire 1 V" b[18]~input_o $end
+$var wire 1 W" mux1|Mux13~2_combout $end
+$var wire 1 X" a[19]~input_o $end
+$var wire 1 Y" mux1|Mux13~0_combout $end
+$var wire 1 Z" mux1|Mux13~3_combout $end
+$var wire 1 [" a[20]~input_o $end
+$var wire 1 \" mux1|Mux12~0_combout $end
+$var wire 1 ]" adder1|p19|Cout~0_combout $end
+$var wire 1 ^" mux1|Mux12~1_combout $end
+$var wire 1 _" b[19]~input_o $end
+$var wire 1 `" mux1|Mux12~2_combout $end
+$var wire 1 a" mux1|Mux12~3_combout $end
+$var wire 1 b" a[21]~input_o $end
+$var wire 1 c" mux1|Mux11~0_combout $end
+$var wire 1 d" adder1|p20|Cout~0_combout $end
+$var wire 1 e" mux1|Mux11~1_combout $end
+$var wire 1 f" b[20]~input_o $end
+$var wire 1 g" mux1|Mux11~2_combout $end
+$var wire 1 h" mux1|Mux11~3_combout $end
+$var wire 1 i" a[22]~input_o $end
+$var wire 1 j" mux1|Mux10~0_combout $end
+$var wire 1 k" b[21]~input_o $end
+$var wire 1 l" adder1|p21|Cout~0_combout $end
+$var wire 1 m" mux1|Mux10~1_combout $end
+$var wire 1 n" mux1|Mux10~2_combout $end
+$var wire 1 o" mux1|Mux10~3_combout $end
+$var wire 1 p" b[22]~input_o $end
+$var wire 1 q" adder1|p22|Cout~0_combout $end
+$var wire 1 r" adder1|p23|sum~0_combout $end
+$var wire 1 s" a[23]~input_o $end
+$var wire 1 t" mux1|Mux9~0_combout $end
+$var wire 1 u" mux1|Mux9~1_combout $end
+$var wire 1 v" mux1|Mux9~2_combout $end
+$var wire 1 w" b[23]~input_o $end
+$var wire 1 x" adder1|p23|Cout~0_combout $end
+$var wire 1 y" mux1|Mux8~1_combout $end
+$var wire 1 z" mux1|Mux8~2_combout $end
+$var wire 1 {" a[24]~input_o $end
+$var wire 1 |" mux1|Mux8~0_combout $end
+$var wire 1 }" mux1|Mux8~3_combout $end
+$var wire 1 ~" a[25]~input_o $end
+$var wire 1 !# mux1|Mux7~0_combout $end
+$var wire 1 "# adder1|p24|Cout~0_combout $end
+$var wire 1 ## mux1|Mux7~1_combout $end
+$var wire 1 $# b[24]~input_o $end
+$var wire 1 %# mux1|Mux7~2_combout $end
+$var wire 1 &# mux1|Mux7~3_combout $end
+$var wire 1 '# b[25]~input_o $end
+$var wire 1 (# adder1|p25|Cout~0_combout $end
+$var wire 1 )# mux1|Mux6~1_combout $end
+$var wire 1 *# mux1|Mux6~2_combout $end
+$var wire 1 +# a[26]~input_o $end
+$var wire 1 ,# mux1|Mux6~0_combout $end
+$var wire 1 -# mux1|Mux6~3_combout $end
+$var wire 1 .# adder1|p26|Cout~0_combout $end
+$var wire 1 /# mux1|Mux5~1_combout $end
+$var wire 1 0# b[26]~input_o $end
+$var wire 1 1# mux1|Mux5~2_combout $end
+$var wire 1 2# a[27]~input_o $end
+$var wire 1 3# mux1|Mux5~0_combout $end
+$var wire 1 4# mux1|Mux5~3_combout $end
+$var wire 1 5# adder1|p27|Cout~0_combout $end
+$var wire 1 6# mux1|Mux4~1_combout $end
+$var wire 1 7# b[27]~input_o $end
+$var wire 1 8# mux1|Mux4~2_combout $end
+$var wire 1 9# a[28]~input_o $end
+$var wire 1 :# mux1|Mux4~0_combout $end
+$var wire 1 ;# mux1|Mux4~3_combout $end
+$var wire 1 <# a[29]~input_o $end
+$var wire 1 =# mux1|Mux3~0_combout $end
+$var wire 1 ># b[28]~input_o $end
+$var wire 1 ?# adder1|p28|Cout~0_combout $end
+$var wire 1 @# mux1|Mux3~1_combout $end
+$var wire 1 A# mux1|Mux3~2_combout $end
+$var wire 1 B# mux1|Mux3~3_combout $end
+$var wire 1 C# b[29]~input_o $end
+$var wire 1 D# adder1|p29|Cout~0_combout $end
+$var wire 1 E# mux1|Mux2~1_combout $end
+$var wire 1 F# mux1|Mux2~2_combout $end
+$var wire 1 G# a[30]~input_o $end
+$var wire 1 H# mux1|Mux2~0_combout $end
+$var wire 1 I# mux1|Mux2~3_combout $end
+$var wire 1 J# adder1|p30|Cout~0_combout $end
+$var wire 1 K# mux1|Mux1~1_combout $end
+$var wire 1 L# b[30]~input_o $end
+$var wire 1 M# mux1|Mux1~2_combout $end
+$var wire 1 N# a[31]~input_o $end
+$var wire 1 O# mux1|Mux1~0_combout $end
+$var wire 1 P# mux1|Mux1~3_combout $end
+$var wire 1 Q# b[31]~input_o $end
+$var wire 1 R# mux1|Mux0~0_combout $end
+$var wire 1 S# mux1|Mux0~1_combout $end
+$var wire 1 T# adder1|p31|Cout~0_combout $end
+$var wire 1 U# adder1|p32|sum~0_combout $end
+$var wire 1 V# mux1|Mux0~2_combout $end
+$var wire 1 W# adder1|p32|Cout~0_combout $end
+$var wire 1 X# zero~3_combout $end
+$var wire 1 Y# zero~1_combout $end
+$var wire 1 Z# zero~0_combout $end
+$var wire 1 [# zero~2_combout $end
+$var wire 1 \# zero~4_combout $end
+$var wire 1 ]# zero~6_combout $end
+$var wire 1 ^# zero~5_combout $end
+$var wire 1 _# zero~7_combout $end
+$var wire 1 `# zero~8_combout $end
+$var wire 1 a# zero~9_combout $end
+$var wire 1 b# zero~10_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 !
+b10 "
+b0 #
+bz $
+0%
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+1F
+xG
+0H
+1I
+xJ
+1K
+1L
+1M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+11!
+02!
+13!
+04!
+05!
+16!
+07!
+08!
+09!
+0:!
+0;!
+1<!
+1=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+00"
+01"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+0;"
+0<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+0V"
+0W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+0n"
+0o"
+0p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+$end
+#99000
+b0zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzzz $
+b0zzzzzzzzzzzzz $
+b0zzzzzzzzzzzz $
+b0zzzzzzzzzzz $
+b0zzzzzzzzzz $
+b0zzzzzzzzz $
+b0zzzzzzzz $
+b0zzzzzzz $
+b0zzzzzz $
+b0zzzzz $
+b0zzzz $
+b0zzz $
+b0zz $
+b0z $
+b0 $
+#50000000
