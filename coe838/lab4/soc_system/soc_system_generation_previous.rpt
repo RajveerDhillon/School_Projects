@@ -1,0 +1,67 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/student2/ypzou/coe838/lab4 --output-directory=/home/student2/ypzou/coe838/lab4/soc_system --report-file=bsf:/home/student2/ypzou/coe838/lab4/soc_system/soc_system.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/student2/ypzou/coe838/lab4/soc_system.qsys
+Progress: Loading lab4/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 14.0]
+Progress: Parameterizing module hps_0
+Progress: Adding adder_control_0 [adder_control 1.0]
+Progress: Parameterizing module adder_control_0
+Progress: Adding adder_data_0 [adder_data 1.0]
+Progress: Parameterizing module adder_data_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/student2/ypzou/coe838/lab4 --output-directory=/home/student2/ypzou/coe838/lab4/soc_system/synthesis --file-set=QUARTUS_SYNTH --report-file=html:/home/student2/ypzou/coe838/lab4/soc_system/soc_system.html --report-file=sopcinfo:/home/student2/ypzou/coe838/lab4/soc_system.sopcinfo --report-file=cmp:/home/student2/ypzou/coe838/lab4/soc_system/soc_system.cmp --report-file=qip:/home/student2/ypzou/coe838/lab4/soc_system/synthesis/soc_system.qip --report-file=svd:/home/student2/ypzou/coe838/lab4/soc_system/synthesis/soc_system.svd --report-file=regmap:/home/student2/ypzou/coe838/lab4/soc_system/synthesis/soc_system.regmap --report-file=xml:/home/student2/ypzou/coe838/lab4/soc_system/soc_system.xml --report-file=debuginfo:/home/student2/ypzou/coe838/lab4/soc_system/synthesis/soc_system.debuginfo --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/student2/ypzou/coe838/lab4/soc_system.qsys --language=VHDL
+Progress: Loading lab4/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 14.0]
+Progress: Parameterizing module hps_0
+Progress: Adding adder_control_0 [adder_control 1.0]
+Progress: Parameterizing module adder_control_0
+Progress: Adding adder_data_0 [adder_data 1.0]
+Progress: Parameterizing module adder_data_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: adder_control_0: "soc_system" instantiated adder_control "adder_control_0"
+Info: adder_data_0: "soc_system" instantiated adder_data "adder_data_0"
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: adder_control_0_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "adder_control_0_s0_translator"
+Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: adder_control_0_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "adder_control_0_s0_agent"
+Info: adder_control_0_s0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "adder_control_0_s0_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: adder_control_0_s0_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "adder_control_0_s0_burst_adapter"
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: adder_control_0_s0_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "adder_control_0_s0_rsp_width_adapter"
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/student2/ypzou/coe838/lab4/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: soc_system: Done "soc_system" with 22 modules, 76 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

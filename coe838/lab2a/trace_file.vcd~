@@ -1,0 +1,82 @@
+$date
+     Jan 24, 2020       16:55:09
+$end
+
+$version
+              SystemC 2.3.0-ASI --- Sep 10 2012 16:44:06
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaa  clk       $end
+$var wire    4  aab  A0   $end
+$var wire    4  aac  A1  $end
+$var wire    4  aad A2  $end
+$var wire    4  aae  A3 $end
+$var wire    4  aaf  A4 $end
+$var wire    4  aag  A5 $end
+$var wire    4  aah  A6 $end
+$var wire    4  aai  A7 $end
+$var wire    4  aaj  B0 $end
+$var wire    4  aak  B1 $end
+$var wire    4  aal  B2 $end
+$var wire    4  aam  B3 $end
+$var wire    4  aan  B4 $end
+$var wire    4  aao  B5 $end
+$var wire    4  aap  B6 $end
+$var wire    4  aaq  B7 $end
+
+$var wire    4  aae  P0 $end
+$var wire    4  aae  P1 $end
+$var wire    4  aae  P2 $end
+$var wire    4  aae  P3 $end
+$var wire    4  aae  P4 $end
+$var wire    4  aae  P5 $end
+$var wire    4  aae  P6 $end
+$var wire    4  aae  P7 $end
+$var wire    4  aae  P8 $end
+$var wire    4  aae  P9 $end
+$var wire    4  aae  P10 $end
+$var wire    4  aae  P11 $end
+$var wire    4  aae  P12 $end
+$var wire    4  aae  P13 $end
+$var wire    4  aae  P14 $end
+$var wire    4  aae  P16 $end
+ $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaa
+b11 aab
+b110 aac
+b1010 aad
+b0 aae
+$end
+
+#5
+0aaa
+
+#10
+1aaa
+b101 aac
+b1111 aad
+
+#15
+0aaa
+
+#20
+1aaa
+b110 aab
+b10 aac
+b0 aad
+
+#25
+0aaa

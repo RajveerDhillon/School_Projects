@@ -1,0 +1,53 @@
+$date
+     Jan 24, 2020       16:55:09
+$end
+
+$version
+              SystemC 2.3.0-ASI --- Sep 10 2012 16:44:06
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaa  clk       $end
+$var wire    4  aab  input_A [3:0]  $end
+$var wire    4  aac  input_B [3:0]  $end
+$var wire    4  aad  Carry_and_Sum_of_CSA [3:0]  $end
+$var wire    4  aae  Carry_and_Sum_of_CPA [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaa
+b11 aab
+b110 aac
+b1010 aad
+b0 aae
+$end
+
+#5
+0aaa
+
+#10
+1aaa
+b101 aac
+b1111 aad
+
+#15
+0aaa
+
+#20
+1aaa
+b110 aab
+b10 aac
+b0 aad
+
+#25
+0aaa
+

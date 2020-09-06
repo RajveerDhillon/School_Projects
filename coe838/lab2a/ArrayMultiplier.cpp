@@ -1,0 +1,260 @@
+// COE838 - Lab2 Accelerator based SoC Design
+// ArrayMultiplier  
+#include "ArrayMultiplier.h"
+#include "CPA.h"
+#include "CSA.h"
+
+void ArrayMultiplier :: arraymultiplier_method(){
+	
+}
+
+void make_ArrayMultiplier(){
+	sc_trace_file *tf;                  // Create VCD file for tracing
+	
+	// ArrayMultiplier Signals
+	sc_signal<bool> a0; sc_signal<bool> a1; sc_signal<bool> a2; sc_signal<bool> a3;
+	sc_signal<bool> a4; sc_signal<bool> a5; sc_signal<bool> a6; sc_signal<bool> a7;
+	
+	sc_signal<bool> b0; sc_signal<bool> b1; sc_signal<bool> b2; sc_signal<bool> b3; 
+	sc_signal<bool> b4; sc_signal<bool> b5; sc_signal<bool> b6; sc_signal<bool> b7;	
+	
+	sc_signal<bool> p0; sc_signal<bool> p1; sc_signal<bool> p2; sc_signal<bool> p3; 
+	sc_signal<bool> p4; sc_signal<bool> p5; sc_signal<bool> p6; sc_signal<bool> p7; 
+	sc_signal<bool> p8; sc_signal<bool> p9; sc_signal<bool> p10; sc_signal<bool> p11; 
+	sc_signal<bool> p12; sc_signal<bool> p13; sc_signal<bool> p14; sc_signal<bool> p15; 
+
+	// temp signals for connection	
+	sc_signal<bool> ci; 
+
+	sc_signal<bool> s; sc_signal<bool> s2; sc_signal<bool> s3; sc_signal<bool> s4; 
+	sc_signal<bool> s5; sc_signal<bool> s6; sc_signal<bool> s7; sc_signal<bool> s8;
+	sc_signal<bool> s9; sc_signal<bool> s10; sc_signal<bool> s11; sc_signal<bool> s12; 
+	sc_signal<bool> s13; sc_signal<bool> s14; sc_signal<bool> s15; sc_signal<bool> s16; 
+	sc_signal<bool> s17; sc_signal<bool> s18; sc_signal<bool> s19; sc_signal<bool> s20; 
+	sc_signal<bool> s21; sc_signal<bool> s22; sc_signal<bool> s23; sc_signal<bool> s24; 
+	sc_signal<bool> s25; sc_signal<bool> s26; sc_signal<bool> s27; sc_signal<bool> s28; 
+	sc_signal<bool> s29; sc_signal<bool> s30; sc_signal<bool> s31; sc_signal<bool> s32; 
+	sc_signal<bool> s33; sc_signal<bool> s34; sc_signal<bool> s35; sc_signal<bool> s36; 
+	sc_signal<bool> s37; sc_signal<bool> s38; sc_signal<bool> s39; sc_signal<bool> s40; 
+	sc_signal<bool> s41; sc_signal<bool> s42; sc_signal<bool> s43; sc_signal<bool> s44; 
+	sc_signal<bool> s45; sc_signal<bool> s46; sc_signal<bool> s47; sc_signal<bool> s48; 
+	sc_signal<bool> s49; sc_signal<bool> s50; sc_signal<bool> s51; sc_signal<bool> s52; 
+	sc_signal<bool> s53; sc_signal<bool> s54; sc_signal<bool> s55; sc_signal<bool> s56; 
+	sc_signal<bool> s57; sc_signal<bool> s58; sc_signal<bool> s59; sc_signal<bool> s60; 
+	sc_signal<bool> s61; sc_signal<bool> s62; sc_signal<bool> s63; sc_signal<bool> s64; 
+	 
+	
+	sc_signal<bool> c1; sc_signal<bool> c2; sc_signal<bool> c3; sc_signal<bool> c4; 
+	sc_signal<bool> c5; sc_signal<bool> c6; sc_signal<bool> c7; sc_signal<bool> c8; 
+	sc_signal<bool> c9; sc_signal<bool> c10; sc_signal<bool> c11; sc_signal<bool> c12; 
+	sc_signal<bool> c13; sc_signal<bool> c14; sc_signal<bool> c15; sc_signal<bool> c16; 
+	sc_signal<bool> c17; sc_signal<bool> c18; sc_signal<bool> c19; sc_signal<bool> c20; 
+	sc_signal<bool> c21; sc_signal<bool> c22; sc_signal<bool> c23; sc_signal<bool> c24; 
+	sc_signal<bool> c25; sc_signal<bool> c26; sc_signal<bool> c27; sc_signal<bool> c28; 
+	sc_signal<bool> c29; sc_signal<bool> c30; sc_signal<bool> c31; sc_signal<bool> c32; 
+	sc_signal<bool> c33; sc_signal<bool> c34; sc_signal<bool> c35; sc_signal<bool> c36; 
+	sc_signal<bool> c37; sc_signal<bool> c38; sc_signal<bool> c39; sc_signal<bool> c40; 
+	sc_signal<bool> c41; sc_signal<bool> c42; sc_signal<bool> c43; sc_signal<bool> c44; 
+	sc_signal<bool> c45; sc_signal<bool> c46; sc_signal<bool> c47; sc_signal<bool> c48; 
+	sc_signal<bool> c49; sc_signal<bool> c50; sc_signal<bool> c51; sc_signal<bool> c52; 
+	sc_signal<bool> c53; sc_signal<bool> c54; sc_signal<bool> c55; sc_signal<bool> c56; 
+	sc_signal<bool> c57; sc_signal<bool> c58; sc_signal<bool> c59; sc_signal<bool> c60; 
+	sc_signal<bool> c61; sc_signal<bool> c62; sc_signal<bool> c63; sc_signal<bool> c64; 
+	sc_signal<bool> c65; sc_signal<bool> c66; sc_signal<bool> c67; sc_signal<bool> c68; 
+	sc_signal<bool> c69; sc_signal<bool> c70; sc_signal<bool> c71; sc_signal<bool> c72; 
+	
+
+	sc_clock clk("clk",10,SC_NS,0.5);   //Create a clock signal
+	
+   	ArrayMultiplier arraymultiplier("arraymultiplier");       //Create testbench Device Under Test (DUT)
+	
+	// Ports for ArrayMultiplier
+   	arraymultiplier.clk(clk);
+	
+	arraymultiplier.A0(a0); arraymultiplier.A1(a1); arraymultiplier.A2(a2); arraymultiplier.A3(a3);
+	arraymultiplier.A4(a4); arraymultiplier.A5(a5); arraymultiplier.A6(a6); arraymultiplier.A7(a7); 
+	arraymultiplier.B0(b0);	arraymultiplier.B1(b1);	arraymultiplier.B2(b2);	arraymultiplier.B3(b3); 
+	arraymultiplier.B4(b4); arraymultiplier.B5(b5); arraymultiplier.B6(b6); arraymultiplier.B7(b7);
+
+	// Create CSAs and CPAs here
+	CSA csa1("csa1"); CSA csa2("csa2"); CSA csa3("csa3"); CSA csa4("csa4");
+	CSA csa5("csa5"); CSA csa6("csa6"); CSA csa7("csa7"); CSA csa8("csa8");
+	CSA csa9("csa9"); CSA csa10("csa10"); CSA csa11("csa11"); CSA csa12("csa12");
+	CSA csa13("csa13"); CSA csa14("csa14"); CSA csa15("csa15"); CSA csa16("csa16");
+	CSA csa17("csa17"); CSA csa18("csa18"); CSA csa19("csa19"); CSA csa20("csa20");
+	CSA csa21("csa21"); CSA csa22("csa22"); CSA csa23("csa23"); CSA csa24("csa24"); 
+	CSA csa25("csa25"); CSA csa26("csa26"); CSA csa27("csa27"); CSA csa28("csa28"); 
+	CSA csa29("csa29"); CSA csa30("csa30"); CSA csa31("csa31"); CSA csa32("csa32"); 
+	CSA csa33("csa33"); CSA csa34("csa34"); CSA csa35("csa35"); CSA csa36("csa36");
+	CSA csa37("csa37"); CSA csa38("csa38"); CSA csa39("csa39"); CSA csa40("csa40"); 
+	CSA csa41("csa41"); CSA csa42("csa42"); CSA csa43("csa43"); CSA csa44("csa44"); 
+	CSA csa45("csa45"); CSA csa46("csa46"); CSA csa47("csa47"); CSA csa48("csa48"); 
+	CSA csa49("csa49"); CSA csa50("csa50"); CSA csa51("csa51"); CSA csa52("csa52");
+	CSA csa53("csa53"); CSA csa54("csa54"); CSA csa55("csa55"); CSA csa56("csa56");
+	CSA csa57("csa57"); CSA csa58("csa58"); CSA csa59("csa59"); CSA csa60("csa60");
+	CSA csa61("csa61"); CSA csa62("csa62"); CSA csa63("csa63"); CSA csa64("csa64");
+	
+	CPA cpa1("cpa1"); CPA cpa2("cpa2"); CPA cpa3("cpa3"); CPA cpa4("cpa4");
+	CPA cpa5("cpa5"); CPA cpa6("cpa6"); CPA cpa7("cpa7"); CPA cpa8("cpa8");
+	
+	// Ports for CSA and CPA	
+	csa1.clk(clk); csa2.clk(clk); csa3.clk(clk); csa4.clk(clk); csa5.clk(clk); csa6.clk(clk);
+	csa7.clk(clk); csa8.clk(clk); csa9.clk(clk); csa10.clk(clk); csa11.clk(clk); csa12.clk(clk);  
+	csa13.clk(clk); csa14.clk(clk); csa15.clk(clk); csa16.clk(clk);	csa17.clk(clk); csa18.clk(clk); 
+	csa19.clk(clk); csa20.clk(clk); csa21.clk(clk); csa22.clk(clk); csa23.clk(clk); csa24.clk(clk); 
+	csa25.clk(clk); csa26.clk(clk); csa27.clk(clk); csa28.clk(clk); csa29.clk(clk); csa30.clk(clk); 
+	csa31.clk(clk); csa32.clk(clk); csa33.clk(clk); csa34.clk(clk); csa35.clk(clk); csa36.clk(clk); 
+	csa37.clk(clk); csa38.clk(clk); csa39.clk(clk); csa40.clk(clk); csa41.clk(clk); csa42.clk(clk); 
+	csa43.clk(clk); csa44.clk(clk); csa45.clk(clk); csa46.clk(clk); csa47.clk(clk); csa48.clk(clk);
+	csa49.clk(clk); csa50.clk(clk); csa51.clk(clk); csa52.clk(clk); csa53.clk(clk); csa54.clk(clk); 	csa55.clk(clk); csa56.clk(clk); csa57.clk(clk); csa58.clk(clk); csa59.clk(clk); csa60.clk(clk); 
+	csa61.clk(clk); csa62.clk(clk); csa63.clk(clk); csa64.clk(clk);
+	
+	cpa1.clk(clk); cpa2.clk(clk); cpa3.clk(clk); cpa4.clk(clk); 
+	cpa5.clk(clk); cpa6.clk(clk); cpa7.clk(clk); cpa8.clk(clk); 
+	
+	csa1.A1(a0); csa1.B1(b0); csa1.Cin(ci); csa1.Sin(s); csa1.Cout(c1); csa1.Sout(p0);
+	csa2.A1(a1); csa2.B1(b0); csa2.Cin(ci); csa2.Sin(s); csa2.Cout(c2); csa2.Sout(s2);
+	csa3.A1(a2); csa3.B1(b0); csa3.Cin(ci); csa3.Sin(s); csa3.Cout(c3); csa3.Sout(s3);
+	csa4.A1(a3); csa4.B1(b0); csa4.Cin(ci); csa4.Sin(s); csa4.Cout(c4); csa4.Sout(s4);
+	csa5.A1(a4); csa5.B1(b0); csa5.Cin(ci); csa5.Sin(s); csa5.Cout(c5); csa5.Sout(s5);
+	csa6.A1(a5); csa6.B1(b0); csa6.Cin(ci); csa6.Sin(s); csa6.Cout(c6); csa6.Sout(s6);
+	csa7.A1(a6); csa7.B1(b0); csa7.Cin(ci); csa7.Sin(s); csa7.Cout(c7); csa7.Sout(s7);
+	csa8.A1(a7); csa8.B1(b0); csa8.Cin(ci); csa8.Sin(s); csa8.Cout(c8); csa8.Sout(s8);
+
+	csa9.A1(a0); csa9.B1(b1); csa9.Cin(c1); csa9.Sin(s2); csa9.Cout(c9); csa9.Sout(p1);
+	csa10.A1(a1); csa10.B1(b1); csa10.Cin(c2); csa10.Sin(s3); csa10.Cout(c10); csa10.Sout(s10);
+	csa11.A1(a2); csa11.B1(b1); csa11.Cin(c3); csa11.Sin(s4); csa11.Cout(c11); csa11.Sout(s11);
+	csa12.A1(a3); csa12.B1(b1); csa12.Cin(c4); csa12.Sin(s5); csa12.Cout(c12); csa12.Sout(s12);
+	csa13.A1(a4); csa13.B1(b1); csa13.Cin(c5); csa13.Sin(s6); csa13.Cout(c13); csa13.Sout(s13);
+	csa14.A1(a5); csa14.B1(b1); csa14.Cin(c6); csa14.Sin(s7); csa14.Cout(c14); csa14.Sout(s14);
+	csa15.A1(a6); csa15.B1(b1); csa15.Cin(c7); csa15.Sin(s8); csa15.Cout(c15); csa15.Sout(s15);
+	csa16.A1(a7); csa16.B1(b1); csa16.Cin(c8); csa16.Sin(s); csa16.Cout(c16); csa16.Sout(s16);
+	
+	csa17.A1(a0); csa17.B1(b2); csa17.Cin(c9); csa17.Sin(s10); csa17.Cout(c17); csa17.Sout(p2);
+	csa18.A1(a1); csa18.B1(b2); csa18.Cin(c10); csa18.Sin(s11); csa18.Cout(c18); csa18.Sout(s18);
+	csa19.A1(a2); csa19.B1(b2); csa19.Cin(c11); csa19.Sin(s12); csa19.Cout(c19); csa19.Sout(s19);
+	csa20.A1(a3); csa20.B1(b2); csa20.Cin(c12); csa20.Sin(s13); csa20.Cout(c20); csa20.Sout(s20);
+	csa21.A1(a4); csa21.B1(b2); csa21.Cin(c13); csa21.Sin(s14); csa21.Cout(c21); csa21.Sout(s21);
+	csa22.A1(a5); csa22.B1(b2); csa22.Cin(c14); csa22.Sin(s15); csa22.Cout(c22); csa22.Sout(s22);
+	csa23.A1(a6); csa23.B1(b2); csa23.Cin(c15); csa23.Sin(s16); csa23.Cout(c23); csa23.Sout(s23);
+	csa24.A1(a7); csa24.B1(b2); csa24.Cin(c16); csa24.Sin(s); csa24.Cout(c24); csa24.Sout(s24);
+	
+	csa25.A1(a0); csa25.B1(b3); csa25.Cin(c17); csa25.Sin(s18); csa25.Cout(c25); csa25.Sout(p3);	
+	csa26.A1(a1); csa26.B1(b3); csa26.Cin(c18); csa26.Sin(s19); csa26.Cout(c26); csa26.Sout(s26);	
+	csa27.A1(a2); csa27.B1(b3); csa27.Cin(c19); csa27.Sin(s20); csa27.Cout(c27); csa27.Sout(s27);	
+	csa28.A1(a3); csa28.B1(b3); csa28.Cin(c20); csa28.Sin(s21); csa28.Cout(c28); csa28.Sout(s28);	
+	csa29.A1(a4); csa29.B1(b3); csa29.Cin(c21); csa29.Sin(s22); csa29.Cout(c29); csa29.Sout(s29);	
+	csa30.A1(a5); csa30.B1(b3); csa30.Cin(c22); csa30.Sin(s23); csa30.Cout(c30); csa30.Sout(s30);	
+	csa31.A1(a6); csa31.B1(b3); csa31.Cin(c23); csa31.Sin(s24); csa31.Cout(c31); csa31.Sout(s31);	
+	csa32.A1(a7); csa32.B1(b3); csa32.Cin(c24); csa32.Sin(s); csa32.Cout(c32); csa32.Sout(s32);
+
+	csa33.A1(a0); csa33.B1(b4); csa33.Cin(c25); csa33.Sin(s26); csa33.Cout(c33); csa33.Sout(p4);	
+	csa34.A1(a1); csa34.B1(b4); csa34.Cin(c26); csa34.Sin(s27); csa34.Cout(c34); csa34.Sout(s34);	
+	csa35.A1(a2); csa35.B1(b4); csa35.Cin(c27); csa35.Sin(s28); csa35.Cout(c35); csa35.Sout(s35);	
+	csa36.A1(a3); csa36.B1(b4); csa36.Cin(c28); csa36.Sin(s29); csa36.Cout(c36); csa36.Sout(s36);	
+	csa37.A1(a4); csa37.B1(b4); csa37.Cin(c29); csa37.Sin(s30); csa37.Cout(c37); csa37.Sout(s37);	
+	csa38.A1(a5); csa38.B1(b4); csa38.Cin(c30); csa38.Sin(s31); csa38.Cout(c38); csa38.Sout(s38);	
+	csa39.A1(a6); csa39.B1(b4); csa39.Cin(c31); csa39.Sin(s32); csa39.Cout(c39); csa39.Sout(s39);	
+	csa40.A1(a7); csa40.B1(b4); csa40.Cin(c32); csa40.Sin(s); csa40.Cout(c40); csa40.Sout(s40);
+
+	csa41.A1(a0); csa41.B1(b5); csa41.Cin(c33); csa41.Sin(s34); csa41.Cout(c41); csa41.Sout(p5);	
+	csa42.A1(a1); csa42.B1(b5); csa42.Cin(c34); csa42.Sin(s35); csa42.Cout(c42); csa42.Sout(s42);	
+	csa43.A1(a2); csa43.B1(b5); csa43.Cin(c35); csa43.Sin(s36); csa43.Cout(c43); csa43.Sout(s43);	
+	csa44.A1(a3); csa44.B1(b5); csa44.Cin(c36); csa44.Sin(s37); csa44.Cout(c44); csa44.Sout(s44);	
+	csa45.A1(a4); csa45.B1(b5); csa45.Cin(c37); csa45.Sin(s38); csa45.Cout(c45); csa45.Sout(s45);	
+	csa46.A1(a5); csa46.B1(b5); csa46.Cin(c38); csa46.Sin(s39); csa46.Cout(c46); csa46.Sout(s46);	
+	csa47.A1(a6); csa47.B1(b5); csa47.Cin(c39); csa47.Sin(s40); csa47.Cout(c47); csa47.Sout(s47);	
+	csa48.A1(a7); csa48.B1(b5); csa48.Cin(c40); csa48.Sin(s); csa48.Cout(c48); csa48.Sout(s48);
+
+	csa49.A1(a0); csa49.B1(b6); csa49.Cin(c41); csa49.Sin(s42); csa49.Cout(c49); csa49.Sout(p6);	
+	csa50.A1(a1); csa50.B1(b6); csa50.Cin(c42); csa50.Sin(s43); csa50.Cout(c50); csa50.Sout(s50);	
+	csa51.A1(a2); csa51.B1(b6); csa51.Cin(c43); csa51.Sin(s44); csa51.Cout(c51); csa51.Sout(s51);	
+	csa52.A1(a3); csa52.B1(b6); csa52.Cin(c44); csa52.Sin(s45); csa52.Cout(c52); csa52.Sout(s52);	
+	csa53.A1(a4); csa53.B1(b6); csa53.Cin(c45); csa53.Sin(s46); csa53.Cout(c53); csa53.Sout(s53);	
+	csa54.A1(a5); csa54.B1(b6); csa54.Cin(c46); csa54.Sin(s47); csa54.Cout(c54); csa54.Sout(s54);	
+	csa55.A1(a6); csa55.B1(b6); csa55.Cin(c47); csa55.Sin(s48); csa55.Cout(c55); csa55.Sout(s55);	
+	csa56.A1(a7); csa56.B1(b6); csa56.Cin(c48); csa56.Sin(s); csa56.Cout(c56); csa56.Sout(s56);
+
+	csa57.A1(a0); csa57.B1(b7); csa57.Cin(c49); csa57.Sin(s50); csa57.Cout(c57); csa57.Sout(p7);	
+	csa58.A1(a1); csa58.B1(b7); csa58.Cin(c50); csa58.Sin(s51); csa58.Cout(c58); csa58.Sout(s58);	
+	csa59.A1(a2); csa59.B1(b7); csa59.Cin(c51); csa59.Sin(s52); csa59.Cout(c59); csa59.Sout(s59);	
+	csa60.A1(a3); csa60.B1(b7); csa60.Cin(c52); csa60.Sin(s53); csa60.Cout(c60); csa60.Sout(s60);	
+	csa61.A1(a4); csa61.B1(b7); csa61.Cin(c53); csa61.Sin(s54); csa61.Cout(c61); csa61.Sout(s61);	
+	csa62.A1(a5); csa62.B1(b7); csa62.Cin(c54); csa62.Sin(s55); csa62.Cout(c62); csa62.Sout(s62);	
+	csa63.A1(a6); csa63.B1(b7); csa63.Cin(c55); csa63.Sin(s56); csa63.Cout(c63); csa63.Sout(s63);	
+	csa64.A1(a7); csa64.B1(b7); csa64.Cin(c56); csa64.Sin(s); csa64.Cout(c64); csa64.Sout(s64);
+	
+	cpa1.A1(s58); cpa1.B1(c57); cpa1.Cin(ci); cpa1.Cout(c65); cpa1.Sout(p8);
+	cpa2.A1(s59); cpa2.B1(c58); cpa2.Cin(c65); cpa2.Cout(c66); cpa2.Sout(p9);
+	cpa3.A1(s60); cpa3.B1(c59); cpa3.Cin(c66); cpa3.Cout(c67); cpa3.Sout(p10);
+	cpa4.A1(s61); cpa4.B1(c60); cpa4.Cin(c67); cpa4.Cout(c68); cpa4.Sout(p11);
+	cpa5.A1(s62); cpa5.B1(c61); cpa5.Cin(c68); cpa5.Cout(c69); cpa5.Sout(p12);
+	cpa6.A1(s63); cpa6.B1(c62); cpa6.Cin(c69); cpa6.Cout(c70); cpa6.Sout(p13);
+	cpa7.A1(s64); cpa7.B1(c63); cpa7.Cin(c70); cpa7.Cout(c71); cpa7.Sout(p14);
+	cpa8.A1(c64); cpa8.B1(c71); cpa8.Cin(ci); cpa8.Cout(c72); cpa8.Sout(p15);
+
+	
+	// Create wave file and trace the signals executing
+	tf = sc_create_vcd_trace_file("trace_file");
+        tf->set_time_unit(1, SC_NS);
+	sc_trace(tf, clk, "clk");
+
+	sc_trace(tf, a0, "a0");	sc_trace(tf, a1, "a1");	sc_trace(tf, a2, "a2");	sc_trace(tf, a3, "a3");
+	sc_trace(tf, a4, "a4");	sc_trace(tf, a5, "a5");	sc_trace(tf, a6, "a6");	sc_trace(tf, a7, "a7");
+
+	sc_trace(tf, b0, "b0");	sc_trace(tf, b1, "b1");	sc_trace(tf, b2, "b2");	sc_trace(tf, b3, "b3");
+	sc_trace(tf, b4, "b4");	sc_trace(tf, b5, "b5");	sc_trace(tf, b6, "b6");	sc_trace(tf, b7, "b7");
+
+	sc_trace(tf, p0, "p0");	sc_trace(tf, p1, "p1");	sc_trace(tf, p2, "p2");	sc_trace(tf, p3, "p3");
+	sc_trace(tf, p4, "p4");	sc_trace(tf, p5, "p5");	sc_trace(tf, p6, "p6");	sc_trace(tf, p7, "p7");
+	sc_trace(tf, p8, "p8");	sc_trace(tf, p9, "p9"); sc_trace(tf, p10, "p10"); sc_trace(tf, p11, "p11");
+	sc_trace(tf, p12, "p12"); sc_trace(tf, p13, "p13"); sc_trace(tf, p14, "p14");
+	sc_trace(tf, p15, "p15");
+	
+	cout << "\nExecuting ArrayMultiplier... check .vcd produced"<<endl;
+
+   //	sc_close_vcd_trace_file(tf);
+
+
+// Test Bench 
+
+
+
+
+s.write(0);ci.write(0);
+sc_start(100, SC_NS);
+
+//2 * 4
+
+a0.write(0); a1.write(1); a2.write(0); a3.write(0); a4.write(0);
+a5.write(0); a6.write(0); a7.write(0); b0.write(0); b1.write(0);
+b2.write(1); b3.write(0); b4.write(0); b5.write(0); b6.write(0);
+b7.write(0);
+
+
+sc_start(100, SC_NS);
+
+
+//8 * 8
+
+a0.write(0); a1.write(0); a2.write(0); a3.write(1); a4.write(0);
+a5.write(0); a6.write(0); a7.write(0); b0.write(0); b1.write(0);
+b2.write(0); b3.write(1); b4.write(0); b5.write(0); b6.write(0);
+b7.write(0);
+
+
+sc_start(100, SC_NS);
+
+//6 * 4
+
+a0.write(0); a1.write(1); a2.write(1); a3.write(0); a4.write(0);
+a5.write(0); a6.write(0); a7.write(0); b0.write(0); b1.write(0);
+b2.write(1); b3.write(0); b4.write(0); b5.write(0); b6.write(0);
+b7.write(0);
+
+
+sc_start(100, SC_NS);
+sc_close_vcd_trace_file(tf);
+
+
+}

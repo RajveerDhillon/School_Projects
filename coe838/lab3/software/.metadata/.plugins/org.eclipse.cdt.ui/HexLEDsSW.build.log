@@ -1,0 +1,15 @@
+14:37:16 **** Incremental Build of configuration Debug for project HexLEDsSW ****
+make all 
+Building file: ../seg7.c
+Invoking: GCC C Compiler
+arm-linux-gnueabihf-gcc -I/usr/local/Quartus-EDS-14.0/embedded/ip/altera/hps/altera_hps/hwlib/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"seg7.d" -MT"seg7.d" -o "seg7.o" "../seg7.c"
+Finished building: ../seg7.c
+ 
+Building target: HexLEDsSW
+Invoking: GCC C Linker
+arm-linux-gnueabihf-gcc  -o "HexLEDsSW"  ./led.o ./main.o ./seg7.o   -lpthread -lm -lrt
+Finished building target: HexLEDsSW
+ 
+
+14:37:17 Build Finished (took 715ms)
+

@@ -1,0 +1,43 @@
+-----------------------------
+-- HED_LED_FPGA Tutorial
+-- Lab 3
+-- COE838 Systems-on-Chip Design
+-----------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+ENTITY LED_HEX_FPGA IS
+	PORT( CLOCK_50, HPS_DDR3_RZQ,HPS_ENET_RX_CLK, HPS_ENET_RX_DV		: IN STD_LOGIC;
+		  HPS_DDR3_ADDR 						: OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+		  HPS_DDR3_BA							: OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+		  HPS_DDR3_CS_N							: OUT STD_LOGIC;
+		  HPS_DDR3_CK_P, HPS_DDR3_CK_N, HPS_DDR3_CKE			: OUT STD_LOGIC;
+		  HPS_USB_DIR, HPS_USB_NXT, HPS_USB_CLKOUT			: IN STD_LOGIC;
+		  HPS_ENET_RX_DATA						: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  HPS_SD_DATA, HPS_DDR3_DQS_N, HPS_DDR3_DQS_P			: INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  HPS_ENET_MDIO							: INOUT STD_LOGIC; 
+		  HPS_USB_DATA							: INOUT STD_LOGIC_VECTOR(7 DOWNTO 0); 
+		  HPS_DDR3_DQ							: INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		  HPS_SD_CMD							: INOUT STD_LOGIC;
+		  HPS_ENET_TX_DATA, HPS_DDR3_DM					: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  HPS_DDR3_ODT, HPS_DDR3_RAS_N, HPS_DDR3_RESET_N		: OUT STD_LOGIC;
+		  HPS_DDR3_CAS_N, HPS_DDR3_WE_N					: OUT STD_LOGIC;
+		  HPS_ENET_MDC, HPS_ENET_TX_EN 					: OUT STD_LOGIC; 
+		  LEDR								: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5				: BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+		  HPS_USB_STP, HPS_SD_CLK, HPS_ENET_GTX_CLK      		: OUT STD_LOGIC);		  		  
+END LED_HEX_FPGA;
+
+ARCHITECTURE Behaviour OF LED_HEX_FPGA IS
+
+	--instantiate the soc_systtem component here
+   
+	--SIGNALS instantiated here
+
+	 
+	BEGIN
+
+	--port map soc_system here
+
+End Behaviour;

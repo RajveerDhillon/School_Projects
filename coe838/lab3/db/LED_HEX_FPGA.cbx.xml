@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LED_HEX_FPGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LED_HEX_FPGA|soc_system:u0|soc_system_hps_0:hps_0|soc_system_hps_0_hps_io:hps_io|soc_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_acv_hard_addr_cmd_pads:uaddr_cmd_pads|altddio_out:clock_gen[0].umem_ck_pad" CBX_FILE_NAME="ddio_out_uqe.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
