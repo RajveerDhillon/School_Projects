@@ -1,0 +1,17 @@
+.\demo.o: Demo.c
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\demo.o: cmsis_os.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\demo.o: C:\Keil\ARM\RV31\INC\RTL.H
+.\demo.o: LPC17xx.H
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\demo.o: system_LPC17xx.h
+.\demo.o: GLCD.h
+.\demo.o: LED.h

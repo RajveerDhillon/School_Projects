@@ -1,0 +1,11 @@
+.\bitbanding.o: Bitbanding.c
+.\bitbanding.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\bitbanding.o: LPC17xx.H
+.\bitbanding.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\bitbanding.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bitbanding.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\bitbanding.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\bitbanding.o: system_LPC17xx.h
+.\bitbanding.o: GLCD.h
+.\bitbanding.o: LED.h
+.\bitbanding.o: KBD.h

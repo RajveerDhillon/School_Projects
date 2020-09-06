@@ -1,0 +1,1 @@
+.\enemyright.o: enemyright.c

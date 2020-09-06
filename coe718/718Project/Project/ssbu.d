@@ -1,0 +1,1 @@
+.\ssbu.o: SSBU.c

@@ -1,0 +1,12 @@
+.\demo2.o: Demo2.c
+.\demo2.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\demo2.o: LPC17xx.h
+.\demo2.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\demo2.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\demo2.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\demo2.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\demo2.o: system_LPC17xx.h
+.\demo2.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\demo2.o: GLCD.h
+.\demo2.o: bitband.h
+.\demo2.o: KBD.h

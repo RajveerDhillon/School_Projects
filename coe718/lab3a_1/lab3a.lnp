@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\startup_lpc17xx.o"
+".\system_lpc17xx.o"
+".\rtx_conf_cm.o"
+".\RTX_CM3.lib"
+".\glcd_spi_lpc1700.o"
+".\kbd.o"
+".\demo.o"
+".\led.o"
+--strict --scatter ".\lab3a.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lab3a.map" -o .\lab3a.axf

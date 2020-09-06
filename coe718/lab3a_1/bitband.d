@@ -1,0 +1,10 @@
+.\bitband.o: bitband.c
+.\bitband.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\bitband.o: LPC17xx.H
+.\bitband.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\bitband.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bitband.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\bitband.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\bitband.o: system_LPC17xx.h
+.\bitband.o: GLCD.h
+.\bitband.o: LED.h

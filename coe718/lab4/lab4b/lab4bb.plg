@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+S:\coe718\lab4\lab4bb\lab4bb.uvproj
+Project File Date:  10/28/2014
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling RTX_Conf_CM.c...
+RTX_Conf_CM.c(277): warning:  #1-D: last line of file ends without a newline
+compiling Demo.c...
+Demo.c(83): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+compiling GLCD_SPI_LPC1700.c...
+compiling LED.c...
+linking...
+Program Size: Code=16524 RO-data=6876 RW-data=152 ZI-data=9280  
+"lab4bb.axf" - 0 Error(s), 2 Warning(s).
+Load "S:\\coe718\\lab4\\lab4bb\\lab4bb.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

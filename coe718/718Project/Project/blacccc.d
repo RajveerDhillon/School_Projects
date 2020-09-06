@@ -1,0 +1,1 @@
+.\blacccc.o: blacccc.c

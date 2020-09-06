@@ -1,0 +1,11 @@
+.\demo.o: Demo.c
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\demo.o: LPC17xx.h
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\demo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\demo.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\demo.o: system_LPC17xx.h
+.\demo.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\demo.o: GLCD.h
+.\demo.o: LED.h
