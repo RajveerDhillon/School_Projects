@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Directors>
+  <Director>
+    <dirID>1</dirID>
+    <Name>
+<![CDATA[
+Takeo Kujiraoka
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Square Enix
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>2</dirID>
+    <Name>
+<![CDATA[
+Webb Pickersgill
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Deck Nine Games
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>3</dirID>
+    <Name>
+<![CDATA[
+Tomoki Miyoshi
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Square Enix
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>4</dirID>
+    <Name>
+<![CDATA[
+Keisuke Miyauchi
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Square Enix
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>5</dirID>
+    <Name>
+<![CDATA[
+Daniel Chayer
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Eidos Montreal
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>6</dirID>
+    <Name>
+<![CDATA[
+Francesco Antolini
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Avalanche Games
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>7</dirID>
+    <Name>
+<![CDATA[
+Yoko Taro
+]]>
+    </Name>
+    <Company></Company>
+  </Director>
+  <Director>
+    <dirID>8</dirID>
+    <Name>
+<![CDATA[
+Tomohiko Sho
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Omega Force
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>9</dirID>
+    <Name>
+<![CDATA[
+Toshifumi Nabeshima
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Square Enix
+]]>
+    </Company>
+  </Director>
+  <Director>
+    <dirID>10</dirID>
+    <Name>
+<![CDATA[
+Tetsuya Nomura
+]]>
+    </Name>
+    <Company>
+<![CDATA[
+Square Enix
+]]>
+    </Company>
+  </Director>
+</Directors>

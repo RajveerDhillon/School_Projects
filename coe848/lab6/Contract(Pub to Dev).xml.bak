@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contract(Pub to Dev)s>
+  <Contract(Pub to Dev)>
+    <devID>1</devID>
+    <sqID>1</sqID>
+    <Development Time>5</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>2</devID>
+    <sqID>2</sqID>
+    <Development Time>3</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>3</devID>
+    <sqID>3</sqID>
+    <Development Time>2</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>4</devID>
+    <sqID>4</sqID>
+    <Development Time>7</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>5</devID>
+    <sqID>5</sqID>
+    <Development Time>3</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>6</devID>
+    <sqID>6</sqID>
+    <Development Time>2</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>7</devID>
+    <sqID>7</sqID>
+    <Development Time>3</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>8</devID>
+    <sqID>8</sqID>
+    <Development Time>2</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>9</devID>
+    <sqID>9</sqID>
+    <Development Time>2</Development Time>
+  </Contract(Pub to Dev)>
+  <Contract(Pub to Dev)>
+    <devID>10</devID>
+    <sqID>10</sqID>
+    <Development Time>6</Development Time>
+  </Contract(Pub to Dev)>
+</Contract(Pub to Dev)s>

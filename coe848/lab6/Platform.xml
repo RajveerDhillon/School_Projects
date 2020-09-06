@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Platforms>
+  <Platform>
+    <vgID>1</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One></Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade>True</Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>2</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One>True</Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux>True</Linux>
+    <macOS>True</macOS>
+    <Android>True</Android>
+    <iOS>True</iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>3</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch>True</Nintendo Switch>
+    <Xbox One></Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>4</vgID>
+    <PS4></PS4>
+    <Nintendo Switch>True</Nintendo Switch>
+    <Xbox One></Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>5</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One>True</Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux>True</Linux>
+    <macOS>True</macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia>True</Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>6</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One>True</Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>7</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One>True</Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>8</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch>True</Nintendo Switch>
+    <Xbox One></Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3>True</PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita>True</PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>9</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One></Xbox One>
+    <Microsoft Windows>True</Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+  <Platform>
+    <vgID>10</vgID>
+    <PS4>True</PS4>
+    <Nintendo Switch></Nintendo Switch>
+    <Xbox One>True</Xbox One>
+    <Microsoft Windows></Microsoft Windows>
+    <PS3></PS3>
+    <Arcade></Arcade>
+    <Linux></Linux>
+    <macOS></macOS>
+    <Android></Android>
+    <iOS></iOS>
+    <Stadia></Stadia>
+    <PS Vita></PS Vita>
+  </Platform>
+</Platforms>

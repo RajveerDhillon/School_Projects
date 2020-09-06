@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gamemodes>
+  <Gamemode>
+    <vgID>1</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>True</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>2</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>3</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>4</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>5</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>6</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>7</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>8</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>True</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>9</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>True</Multiplayer>
+  </Gamemode>
+  <Gamemode>
+    <vgID>10</vgID>
+    <Single Player>True</Single Player>
+    <Multiplayer>False</Multiplayer>
+  </Gamemode>
+</Gamemodes>

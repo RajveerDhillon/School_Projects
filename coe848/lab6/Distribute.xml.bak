@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributes>
+  <Distribute>
+    <vgID>1</vgID>
+    <sqID>1</sqID>
+    <Release Date North America>2018-01-30</Release Date North America>
+    <Release Date Japan>2018-01-11</Release Date Japan>
+    <Copies_Sold>460000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>2</vgID>
+    <sqID>2</sqID>
+    <Release Date North America>2017-12-20</Release Date North America>
+    <Release Date Japan>2017-12-20</Release Date Japan>
+    <Copies_Sold></Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>3</vgID>
+    <sqID>3</sqID>
+    <Release Date North America>2019-08-22</Release Date North America>
+    <Release Date Japan>2019-08-22</Release Date Japan>
+    <Copies_Sold>36000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>4</vgID>
+    <sqID>4</sqID>
+    <Release Date North America>2018-07-13</Release Date North America>
+    <Release Date Japan>2018-07-13</Release Date Japan>
+    <Copies_Sold>2000000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>5</vgID>
+    <sqID>5</sqID>
+    <Release Date North America>2018-09-14</Release Date North America>
+    <Release Date Japan>2018-09-14</Release Date Japan>
+    <Copies_Sold>4200000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>6</vgID>
+    <sqID>6</sqID>
+    <Release Date North America>2018-12-04</Release Date North America>
+    <Release Date Japan>2018-12-04</Release Date Japan>
+    <Copies_Sold>378056</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>7</vgID>
+    <sqID>7</sqID>
+    <Release Date North America>2017-03-07</Release Date North America>
+    <Release Date Japan>2017-02-23</Release Date Japan>
+    <Copies_Sold>4500000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>8</vgID>
+    <sqID>8</sqID>
+    <Release Date North America>2017-04-27</Release Date North America>
+    <Release Date Japan>2016-05-27</Release Date Japan>
+    <Copies_Sold>580000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>9</vgID>
+    <sqID>9</sqID>
+    <Release Date North America>2019-03-05</Release Date North America>
+    <Release Date Japan>2019-02-28</Release Date Japan>
+    <Copies_Sold>80000</Copies_Sold>
+  </Distribute>
+  <Distribute>
+    <vgID>10</vgID>
+    <sqID>10</sqID>
+    <Release Date North America>2019-01-29</Release Date North America>
+    <Release Date Japan>2019-01-25</Release Date Japan>
+    <Copies_Sold>5000000</Copies_Sold>
+  </Distribute>
+</Distributes>

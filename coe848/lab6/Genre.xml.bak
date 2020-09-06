@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Genres>
+  <Genre>
+    <vgID>1</vgID>
+    <Gen1>
+<![CDATA[
+Action Role-Playing
+]]>
+    </Gen1>
+    <Gen2>
+<![CDATA[
+Fighting
+]]>
+    </Gen2>
+  </Genre>
+  <Genre>
+    <vgID>2</vgID>
+    <Gen1>
+<![CDATA[
+Graphic Adventure
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>3</vgID>
+    <Gen1>
+<![CDATA[
+Action Role-Playing
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>4</vgID>
+    <Gen1>
+<![CDATA[
+Role Playing
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>5</vgID>
+    <Gen1>
+<![CDATA[
+Action Adventure
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>6</vgID>
+    <Gen1>
+<![CDATA[
+Action Adventure
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>7</vgID>
+    <Gen1>
+<![CDATA[
+Action Role-Playing
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>8</vgID>
+    <Gen1>
+<![CDATA[
+Hack and Slash
+]]>
+    </Gen1>
+    <Gen2>
+<![CDATA[
+Action Role-Playing
+]]>
+    </Gen2>
+  </Genre>
+  <Genre>
+    <vgID>9</vgID>
+    <Gen1>
+<![CDATA[
+Stealth
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+  <Genre>
+    <vgID>10</vgID>
+    <Gen1>
+<![CDATA[
+Action Role-Playing
+]]>
+    </Gen1>
+    <Gen2></Gen2>
+  </Genre>
+</Genres>

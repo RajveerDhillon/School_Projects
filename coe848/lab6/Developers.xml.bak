@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Developers>
+  <Developer>
+    <devID>1</devID>
+    <Name>
+<![CDATA[
+Team Ninja
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Koei Tecmo
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-17</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>2</devID>
+    <Name>
+<![CDATA[
+Avalanche Studios
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Nordisk Film
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-25</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>3</devID>
+    <Name>
+<![CDATA[
+Tokyo RPG Factory
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Square Enix
+]]>
+    </Parent Company>
+    <Date of Formation>1905-07-06</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>4</devID>
+    <Name>
+<![CDATA[
+Square Enix
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Square Enix
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-25</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>5</devID>
+    <Name>
+<![CDATA[
+Eidos Montreal
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Square Enix Europe
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-29</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>6</devID>
+    <Name>
+<![CDATA[
+Deck Nine
+]]>
+    </Name>
+    <Parent Company></Parent Company>
+    <Date of Formation>1905-06-19</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>7</devID>
+    <Name>
+<![CDATA[
+Platinum Games
+]]>
+    </Name>
+    <Parent Company></Parent Company>
+    <Date of Formation>1905-06-29</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>8</devID>
+    <Name>
+<![CDATA[
+Omega Force
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Koei Tecmo
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-18</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>9</devID>
+    <Name>
+<![CDATA[
+Ilinx
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Square Enix
+]]>
+    </Parent Company>
+    <Date of Formation>1905-06-27</Date of Formation>
+  </Developer>
+  <Developer>
+    <devID>10</devID>
+    <Name>
+<![CDATA[
+Luminous Productions
+]]>
+    </Name>
+    <Parent Company>
+<![CDATA[
+Square Enix
+]]>
+    </Parent Company>
+    <Date of Formation>1905-07-10</Date of Formation>
+  </Developer>
+</Developers>

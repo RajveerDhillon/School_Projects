@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Video_Games>
+  <Video_Game>
+    <vgID>1</vgID>
+    <Title>
+<![CDATA[
+Dissidia Final Fantasy NT
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Final Fantasy
+]]>
+    </IP>
+    <DLC>True</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>2</vgID>
+    <Title>
+<![CDATA[
+Life is Strange;: Beofre the Storm
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Life is Strange
+]]>
+    </IP>
+    <DLC>False</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>3</vgID>
+    <Title>
+<![CDATA[
+Oninaki
+]]>
+    </Title>
+    <IP></IP>
+    <DLC>False</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>4</vgID>
+    <Title>
+<![CDATA[
+Octopath Traveler
+]]>
+    </Title>
+    <IP></IP>
+    <DLC>False</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>5</vgID>
+    <Title>
+<![CDATA[
+Shadow of the Tomb Raider
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Tomb Raider
+]]>
+    </IP>
+    <DLC>False</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>6</vgID>
+    <Title>
+<![CDATA[
+Just Cause 4
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Just Cause
+]]>
+    </IP>
+    <DLC>True</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>7</vgID>
+    <Title>
+<![CDATA[
+Nier Automata
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Nier
+]]>
+    </IP>
+    <DLC>True</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>8</vgID>
+    <Title>
+<![CDATA[
+Dragon Quest Heroes II
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Dragon Quest
+]]>
+    </IP>
+    <DLC>True</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>9</vgID>
+    <Title>
+<![CDATA[
+Left Alive
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Front Mission
+]]>
+    </IP>
+    <DLC>False</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+  <Video_Game>
+    <vgID>10</vgID>
+    <Title>
+<![CDATA[
+Kingdom Hearts III
+]]>
+    </Title>
+    <IP>
+<![CDATA[
+Kingdom Hearts
+]]>
+    </IP>
+    <DLC>True</DLC>
+    <Remake/Remaster>False</Remake/Remaster>
+  </Video_Game>
+</Video_Games>
