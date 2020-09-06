@@ -1,0 +1,106 @@
+/* time_server.c - main */
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <stdlib.h>
+#include <string.h>
+#include <netdb.h>
+#include <stdio.h>
+#include <time.h>
+#include <sys/stat.h>
+
+#define Err1 "PDU type not recignized"
+#define Err2 "File not found"
+
+/*------------------------------------------------------------------------
+ * main - Iterative UDP server for TIME service
+ *------------------------------------------------------------------------
+ */
+int
+main(int argc, char *argv[])
+{
+	struct sockaddr_in fsin;	/* the from address of a client	*/
+	struct stat filestat;
+	char	*service = "3000";	/* service name or port number	*/
+	char	buf[100];		/* "input" buffer; any size > 0	*/
+	char    *pts;
+	int	sock,n;			/* server socket		*/
+	time_t	now;			/* current time			*/
+	int	alen, size;			/* from-address length		*/
+        struct sockaddr_in sin; /* an Internet endpoint address         */
+        int     s, type;        /* socket descriptor and socket type    */
+	u_short	portbase = 0;	/* port base, for non-root servers	*/
+        FILE*   fd;                                                                        
+	struct pdu
+	{
+	char type;
+	char data[100];
+	} rpdu, tpdu;
+ 
+
+	switch (argc) {
+	case	1:
+		break;
+	case	2:
+		service = argv[1];
+		break;
+	default:
+		fprintf(stderr, "usage: time_server [host [port]]\n");
+
+	}
+
+                                                                                
+        memset(&sin, 0, sizeof(sin));
+        sin.sin_family = AF_INET;
+        sin.sin_addr.s_addr = INADDR_ANY;
+
+   /* Map service name to port number */
+        sin.sin_port = htons((u_short)atoi(service));
+                                                                                
+    /* Allocate a socket */
+        s = socket(AF_INET, SOCK_DGRAM, 0);
+        if (s < 0){
+		fprintf(stderr, "can't creat socket\n");
+		exit(1);
+	}
+                                                                                
+    /* Bind the socket */
+        if (bind(s, (struct sockaddr *)&sin, sizeof(sin)) < 0)
+		fprintf(stderr, "can't bind to %s port\n", service);
+
+	while(1){
+		recvfrom(s, &rpdu, 101, 0, (struct sockaddr *)&fsin, &alen);
+		if(rpdu.type != 'C'){
+			tpdu.type = 'E';
+			strcpy(tpdu.data, Err1);
+			sendto(sock, &tpdu, 101, 0, (struct sockaddr *)&fsin, sizeof(fsin));
+			continue;
+		}		
+
+		else{
+			fd = open(rpdu.data, 'r');
+			if(fd<0){
+				tpdu.type = 'E';
+				strcpy(tpdu.data, Err2);
+				sendto(sock, &tpdu, 101, 0, (struct sockaddr *)&fsin, sizeof(fsin));
+				continue;
+			}
+
+		fstat(fd, &filestat);
+		size = filestat.st_size;
+		rpdu.type = 'D';
+		while(1){
+			n = read(fd, tpdu.data, 100);
+			size = size-n;
+			if(size == 0){
+					rpdu.type = 'F';
+					sendto(sock, &tpdu, 101, 0, (struct sockaddr *)&fsin, sizeof(fsin));
+					break;
+				}
+			else{
+				sendto(sock, &tpdu, 101, 0, (struct sockaddr *)&fsin, sizeof(fsin));
+				}
+			}
+		}
+	}}

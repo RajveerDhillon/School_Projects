@@ -1,0 +1,175 @@
+/* A simple echo client using TCP */
+#include <stdio.h>
+#include <netdb.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <fcntl.h>                                                        
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+
+#define SERVER_TCP_PORT 3000	/* well-known port */
+#define BUFLEN		256	/* buffer length */
+#define Err1 "PDU type not recognized"
+#define Err2 "File not found"
+
+
+struct pdu {
+		char type;
+		int length;
+		char data[BUFLEN];
+} rpdu, tpdu;
+	
+
+int main(int argc, char **argv)
+{
+	int 	n, i, bytes_to_read;
+	int 	sd, port;
+	struct	hostent		*hp;
+	struct	sockaddr_in server;
+	struct stat fstat;
+	char	*host, *bp, rbuf[BUFLEN], sbuf[BUFLEN], filename[BUFLEN], cmd, currentdir[1024];
+	FILE* 	fp;
+	switch(argc){
+	case 2:
+		host = argv[1];
+		port = SERVER_TCP_PORT;
+		break;
+	case 3:
+		host = argv[1];
+		port = atoi(argv[2]);
+		break;
+	default:
+		fprintf(stderr, "Usage: %s host [port]\n", argv[0]);
+		exit(1);
+	}
+
+	/* Create a stream socket	*/	
+	if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
+		fprintf(stderr, "Can't creat a socket\n");
+		exit(1);
+	}
+
+	bzero((char *)&server, sizeof(struct sockaddr_in));//sets all values of 
+	server.sin_family = AF_INET;
+	server.sin_port = htons(port);
+	if (hp = gethostbyname(host)) 
+	  bcopy(hp->h_addr, (char *)&server.sin_addr, hp->h_length);
+	else if ( inet_aton(host, (struct in_addr *) &server.sin_addr) ){
+	  fprintf(stderr, "Can't get server's address\n");
+	  exit(1);
+	}
+
+	/* Connecting to the server */
+	if (connect(sd, (struct sockaddr *)&server, sizeof(server)) == -1){
+	  fprintf(stderr, "Can't connect \n");
+	  exit(1);
+	}
+
+
+	while(1){
+ 		printf("Please enter command: \n D- download file; \n U- file upload; \n C- change directory; \n L- list directory; Q-Quit. \n");		
+		scanf("%c",tpdu.type); //Read user command
+ 		
+		switch (tpdu.type){
+		case 'D':
+			printf("Which file to download: \n");
+			scanf("%s",&tpdu.data);
+			tpdu.length = strlen(tpdu.data);
+			tdpu.data[tpdu.length-1] = '\0';
+			write(sd, &tpdu, sizeof(tpdu));
+			read(sd, &rpdu, sizeof(rpdu));
+
+			if(rpdu.type == 'F'){
+				fp = open(tpdu.data, "w");
+				fwrite(rpdu.data,sizeof(char), rpdu.length, fp);
+				if(rpdu.length == BUFLEN) {
+						read(sd, (char *)&rpdu, sizeof(rpdu));
+						fwrite(rpdu.data, sizeof(char), rpdu.length, fp);
+					}
+					fclose(fp);
+					printf("Transfered File.\n");
+				} 
+				else {
+					fprintf(stderr, "%s", rpdu.data);
+				}
+				break;				
+			
+
+		case 'U':
+			printf("Which file to upload: \n");
+			scanf("%s",&tpdu.data);
+			tpdu.length = strlen(tpdu.data);
+			fp = fopen(tpdu.data,"r");
+			write(sd, &tpdu, tpdu.length);
+			read(sd, &rpdu, sizeof(rpdu));
+			if(rpdu.type = 'R'){
+				if(fp == NULL) //Cannot open the file
+				{  
+		        		fprintf(stdout, "File not found. Sending error message to client\n");
+					tpdu.type = 'E';
+					strcpy(tpdu.data, Err2);
+					write(sd,(char *)&tpdu, sizeof(tpdu));
+				}
+				else {
+					tpdu.type = 'F';
+					tpdu.length = fread(tpdu.data, sizeof(char), BUFLEN, fp);
+					write(sd, &tpdu, sizeof(tpdu));
+					printf("File Sent");
+				}
+				fclose(fp);
+				break;
+		
+		case 'C': 
+			printf("Change directory to: \n");
+			scanf("%s",&tpdu.data);
+			tpdu.type = 'P';
+			tpdu.length = strlen(tpdu.data);
+			tpdu.data[tpdu.length-1] = '\0';
+			printf("Current working dir: %s\n", getcwd( sizeof(currentdir)));
+			printf("Directory changed to \"%s\"\n", tpdu.data);
+			write(sd, (char *)&tpdu, sizeof(tpdu));
+			read(sd, (char *)&rpdu, sizeof(rpdu));
+
+			if(rpdu.type = 'R'){
+				printf("Directory Changed \n");
+			}
+			else {
+				printf("Could not change Directory");
+			}
+			break;			
+			
+		case 'L':
+			printf("Listed directories: \n");
+			tpdu.type = 'L';
+			scanf ("%s",&tpdu.data);
+			write(sd, &tpdu, sizeof(tpdu));
+			read(sd, &rpdu, sizeof(rpdu));
+			if(rpdu.type = 'I'){
+				write(1, rpdu.data, rpdu.length);
+			}
+			else {
+				printf ("Could not List Directory");			
+			
+			}
+		
+		case 'Q':
+			tpdu.type = 'Q';
+			write(sd, &tpdu, 1);
+			close(sd);
+			exit(0);
+		
+		default: 
+			printf ("Invalid Command");
+
+	}
+}
+}
+}
+
+
+
+	

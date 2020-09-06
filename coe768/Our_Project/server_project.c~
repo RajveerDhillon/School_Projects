@@ -1,0 +1,204 @@
+/* A simple echo server using TCP */
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/signal.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <unistd.h>
+
+#define SERVER_TCP_PORT 	3000	/* well-known port */
+#define BUFLEN			500	/* buffer length */
+
+#define Err1 "PDU type not recognized"
+#define Err2 "File not found"
+
+int echod(int);
+void reaper(int);
+
+
+struct pdu {
+	char type;
+	int length;
+	char data[BUFLEN];
+} rpdu, tpdu;
+	
+
+int main(int argc, char **argv)
+{
+	int 	sd, new_sd, client_len, port;
+	struct	sockaddr_in server, client; //contains the internet address
+
+	switch(argc){
+	case 1:
+		port = SERVER_TCP_PORT;
+		break;
+	case 2:
+		port = atoi(argv[1]);
+		break;
+	default:
+		fprintf(stderr, "Usage: %d [port]\n", argv[0]);
+		exit(1);
+	}
+
+	/* Create a stream socket	*/
+	//below socket fuction will take:
+	// address domain of the socket (AF_INET)
+	// secong argumanet is type of socket (SOCK_STREAM) which in this case is TCP
+	// third arugment is 0, which tells OS to choose most appropriate protocol, in this case TCP for stream sockets (SOCK_STREAM)
+	if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1) { //if the return of socket function is -1, then return the error
+		fprintf(stderr, "Can't create a socket\n");
+		exit(1);
+	}
+
+	/* Bind an address to the socket	*/
+	server.sin_family = AF_INET;
+	server.sin_port = htons(port);
+	server.sin_addr.s_addr = htonl(INADDR_ANY);//will contain the server address
+	if (bind(sd, (struct sockaddr *)&server, sizeof(server)) == -1){
+		fprintf(stderr, "Can't bind name to socket\n");
+		exit(1);
+	}
+
+	/* queue up to 5 connect requests  */
+	listen(sd, 5);
+
+	(void) signal(SIGCHLD, reaper);
+
+	while(1) {
+	  client_len = sizeof(client);
+	  new_sd = accept(sd, (struct sockaddr *)&client, &client_len);
+	  if(new_sd < 0){
+	    fprintf(stderr, "Can't accept client \n");
+	    exit(1);
+	  }
+	  switch (fork()){
+	  case 0:		/* child */
+		(void) close(sd);
+		exit(echod(new_sd));
+	  default:		/* parent */
+		(void) close(new_sd);
+		break;
+	  case -1:
+		fprintf(stderr, "fork: error\n");
+	  }
+	}
+}
+
+/*	echod program	*/
+int echod(int sd)
+{	
+	int 	n, bytes_to_read, size;
+	FILE *fp;
+	DIR   *d;
+	char currentdir[1024];
+	struct dirent *ent;
+	struct stat fstat;
+	
+	
+	
+	while(1){
+		read(sd, (char *)&rpdu, sizeof(rpdu));
+	
+		switch (rpdu.type){
+		// DOWNLOAD
+		case 'D':
+		       	fp = fopen(rpdu.data, "r");
+			if(fp == NULL) //Cannot open the file
+			{  
+				fprintf(stdout, "File not found. Sending error message to client\n");
+				tpdu.type = 'E';
+				strcpy(tpdu.data, Err2);
+				tpdu.length = strlen(tpdu.data);
+				write(sd,(char *)&tpdu, sizeof(tpdu));
+				
+			}
+			else {
+				tpdu.length = fread(tpdu.data, sizeof(char), BUFLEN, fp);
+				tpdu.type = 'F';
+				write(sd, (char *)&tpdu, sizeof(tpdu));
+				printf("File Downloaded: %s", rpdu.data);	
+			}
+
+			break;
+	
+		// UPLOAD     
+		case 'U':
+			fp = open(rpdu.data, "w");
+			printf("Creating File with Name: %s", rpdu.data);
+			tpdu.type = 'R';
+			tpdu.length = 0;
+
+			write(sd, (char *)&tpdu, sizeof(tpdu));
+			read(sd,  (char *)&rpdu, sizeof(rpdu));
+			
+			fwrite(rpdu.data, sizeof(char), rpdu.length, fp);
+			
+			fclose(fp);
+			printf("File Uploaded to Directory\n");
+		   	break;
+	
+
+		// CHANGE DIRECTORY 
+		case 'P':
+			if(opendir(rpdu.data)) { 			// check if directory is valid
+					chdir(rpdu.data);
+					printf("Current working dir: %s\n", getcwd(cwd, sizeof(cwd)));
+					printf("Directory changed to \"%s\"\n", rpdu.data);
+					spdu.type = 'R';
+				} else {	 // invalid directory
+					spdu.type = 'E';
+					strcpy(spdu.data, "Error: Invalid directory.\n");
+					spdu.length = strlen(spdu.data);
+				}
+				write(sd, (char *)&spdu, sizeof(spdu)); 	// send reply to client
+				break;
+
+		// LIST DIRECTORY
+		case 'L':
+			if(opendir(rpdu.data)){
+				d = opendir(rpdu.data);
+				tpdu.data[0] = '\0';
+				while((dir = readdir(d)) != NULL) {
+					strcat(tpdu.data, dir->d_name);
+					strcat(tpdu.data, "\n");
+					printf("%s\n", tpdu.data);
+				}
+			closedir(d);
+			tpdu.type = 'I';
+			tpdu.length = strlen(tpdu.data);
+			write(sd, (char *)&tpdu, sizeof(tpdu));
+			printf("Listings of Files: \n");
+			}
+			else {
+				tpdu.type = 'E';
+				printf("Invalid Directory Listing");
+				strcpy(tpdu.data, "Director Error");
+				tpdu.length = strlen(tpdu.data);
+			}
+			break;
+
+
+		default:
+			tpdu.type = 'E';
+			tpdu.length = 0;
+			write(sd,  (char *)&tpdu, sizeof(tpdu));
+			printf("Error, Invalid Option");
+			break;
+		}
+	
+	}
+	close(sd);
+	return;
+}
+
+/*	reaper		*/
+void reaper(int sig)
+{
+	int	status;
+	while(wait3(&status, WNOHANG, (struct rusage *)0) >= 0);
+}
