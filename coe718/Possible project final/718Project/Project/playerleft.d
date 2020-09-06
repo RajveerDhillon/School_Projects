@@ -1,0 +1,1 @@
+.\playerleft.o: playerleft.c

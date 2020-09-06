@@ -1,0 +1,1 @@
+.\playerup.o: playerup.c

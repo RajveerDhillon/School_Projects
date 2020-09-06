@@ -1,0 +1,1 @@
+.\enemyleft.o: enemyleft.c

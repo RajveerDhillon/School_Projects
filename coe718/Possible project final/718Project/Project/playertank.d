@@ -1,0 +1,1 @@
+.\playertank.o: playertank.c

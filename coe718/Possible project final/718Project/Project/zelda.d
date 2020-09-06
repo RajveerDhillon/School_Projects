@@ -1,0 +1,1 @@
+.\zelda.o: zelda.c

@@ -1,0 +1,1 @@
+.\huracan.o: huracan.c
