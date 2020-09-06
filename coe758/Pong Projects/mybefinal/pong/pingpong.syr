@@ -1,0 +1,879 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: pingpong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pingpong.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pingpong"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : pingpong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : Yes
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : True
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : NO
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/icon.vhd" in Library work.
+Architecture icon_a of Entity icon is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/ila.vhd" in Library work.
+Architecture ila_a of Entity ila is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/DAC.vhd" in Library work.
+Architecture behavioral of Entity dac is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/Sync.vhd" in Library work.
+Architecture behavioral of Entity sync is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/refresh.vhd" in Library work.
+Architecture behavioral of Entity refresh is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/VGAcontroller.vhd" in Library work.
+Architecture behavioral of Entity vgacontroller is up to date.
+Compiling vhdl file "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" in Library work.
+Entity <pingpong> compiled.
+WARNING:HDLParsers:1406 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" Line 252. No sensitivity list and no wait in the process
+Entity <pingpong> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pingpong> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DAC> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Sync> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <refresh> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VGAcontroller> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pingpong> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" line 217: Instantiating black box module <icon>.
+WARNING:Xst:2211 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" line 221: Instantiating black box module <ila>.
+WARNING:Xst:751 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" line 236: Bad association for formal port 'hcounter' of component 'Sync'.
+WARNING:Xst:751 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" line 236: Bad association for formal port 'vcounter' of component 'Sync'.
+WARNING:Xst:819 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd" line 252: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <hcounter>, <vcounter>, <R>, <G>, <B>
+Entity <pingpong> analyzed. Unit <pingpong> generated.
+
+Analyzing Entity <DAC> in library <work> (Architecture <behavioral>).
+Entity <DAC> analyzed. Unit <DAC> generated.
+
+Analyzing Entity <Sync> in library <work> (Architecture <behavioral>).
+Entity <Sync> analyzed. Unit <Sync> generated.
+
+Analyzing Entity <refresh> in library <work> (Architecture <behavioral>).
+Entity <refresh> analyzed. Unit <refresh> generated.
+
+Analyzing Entity <VGAcontroller> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/student1/r9dhillo/Desktop/mybefinal/pong/VGAcontroller.vhd" line 99: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ball_x1>, <ball_x2>, <ball_y1>, <ball_y2>, <score>, <top_border_x1>, <top_border_x2>, <top_border_y1>, <top_border_y2>, <top_border_x3>, <top_border_x4>, <top_border_y3>, <top_border_y4>, <top_border_x5>, <top_border_x6>, <top_border_y5>, <top_border_y6>, <b_border_x1>, <b_border_x2>, <b_border_y1>, <b_border_y2>, <b_border_x3>, <b_border_x4>, <b_border_y3>, <b_border_y4>, <b_border_x5>, <b_border_x6>, <b_border_y5>, <b_border_y6>, <m_line_x1>, <m_line_x2>, <m_line_y1>, <m_line_y2>, <r_paddle_x1>, <r_paddle_x2>, <r_paddle_y1>, <r_paddle_y2>, <b_paddle_x1>, <b_paddle_x2>, <b_paddle_y1>, <b_paddle_y2>
+Entity <VGAcontroller> analyzed. Unit <VGAcontroller> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DAC>.
+    Related source file is "/home/student1/r9dhillo/Desktop/mybefinal/pong/DAC.vhd".
+    Found 1-bit register for signal <pixel_clk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <DAC> synthesized.
+
+
+Synthesizing Unit <Sync>.
+    Related source file is "/home/student1/r9dhillo/Desktop/mybefinal/pong/Sync.vhd".
+    Found 32-bit up counter for signal <hcount>.
+    Found 32-bit up counter for signal <vcount>.
+    Summary:
+	inferred   2 Counter(s).
+Unit <Sync> synthesized.
+
+
+Synthesizing Unit <refresh>.
+    Related source file is "/home/student1/r9dhillo/Desktop/mybefinal/pong/refresh.vhd".
+    Found 1-bit register for signal <refresh_clk>.
+    Found 32-bit up counter for signal <refreshcnt>.
+    Found 32-bit comparator greatequal for signal <refreshcnt$cmp_ge0000> created at line 48.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <refresh> synthesized.
+
+
+Synthesizing Unit <VGAcontroller>.
+    Related source file is "/home/student1/r9dhillo/Desktop/mybefinal/pong/VGAcontroller.vhd".
+WARNING:Xst:647 - Input <hcounter<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <vcounter<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <top_border_y6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000010100000.
+WARNING:Xst:653 - Signal <top_border_y5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <top_border_y4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:653 - Signal <top_border_y3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <top_border_y2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000010100000.
+WARNING:Xst:653 - Signal <top_border_y1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000001010.
+WARNING:Xst:653 - Signal <top_border_x6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001010000000.
+WARNING:Xst:653 - Signal <top_border_x5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001100010.
+WARNING:Xst:653 - Signal <top_border_x4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001010000000.
+WARNING:Xst:653 - Signal <top_border_x3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <top_border_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:653 - Signal <top_border_x1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <m_line_y2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111000010.
+WARNING:Xst:653 - Signal <m_line_y1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:653 - Signal <m_line_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000010.
+WARNING:Xst:653 - Signal <m_line_x1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000100111110.
+WARNING:Xst:653 - Signal <b_border_y6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111100000.
+WARNING:Xst:653 - Signal <b_border_y5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000000.
+WARNING:Xst:653 - Signal <b_border_y4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111100000.
+WARNING:Xst:653 - Signal <b_border_y3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111000010.
+WARNING:Xst:653 - Signal <b_border_y2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111100000.
+WARNING:Xst:653 - Signal <b_border_y1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000000.
+WARNING:Xst:653 - Signal <b_border_x6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001010000000.
+WARNING:Xst:653 - Signal <b_border_x5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001100010.
+WARNING:Xst:653 - Signal <b_border_x4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001010000000.
+WARNING:Xst:653 - Signal <b_border_x3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <b_border_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:653 - Signal <b_border_x1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+    Found 10-bit subtractor for signal <$sub0000> created at line 109.
+    Found 9-bit subtractor for signal <$sub0001> created at line 110.
+    Found 32-bit comparator greater for signal <B_out$cmp_gt0000> created at line 146.
+    Found 32-bit comparator greater for signal <B_out$cmp_gt0001> created at line 146.
+    Found 32-bit comparator less for signal <B_out$cmp_lt0000> created at line 146.
+    Found 32-bit comparator less for signal <B_out$cmp_lt0001> created at line 146.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0000> created at line 118.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0001> created at line 118.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0002> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0003> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0004> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0005> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0006> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0007> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0008> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0009> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0010> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0011> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0012> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0013> created at line 127.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0014> created at line 133.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0015> created at line 133.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0016> created at line 138.
+    Found 32-bit comparator greater for signal <R_out$cmp_gt0017> created at line 138.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0000> created at line 118.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0001> created at line 118.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0002> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0003> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0004> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0005> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0006> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0007> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0008> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0009> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0010> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0011> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0012> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0013> created at line 127.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0014> created at line 133.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0015> created at line 133.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0016> created at line 138.
+    Found 32-bit comparator less for signal <R_out$cmp_lt0017> created at line 138.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  40 Comparator(s).
+Unit <VGAcontroller> synthesized.
+
+
+Synthesizing Unit <pingpong>.
+    Related source file is "/home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd".
+WARNING:Xst:653 - Signal <trig0> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <top_border_y6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000010100000.
+WARNING:Xst:1780 - Signal <top_border_y5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <top_border_y4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:1780 - Signal <top_border_y3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <top_border_y2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <top_border_y1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <top_border_x6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <top_border_x5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001100010.
+WARNING:Xst:1780 - Signal <top_border_x4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <top_border_x3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <top_border_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:1780 - Signal <top_border_x1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <reset> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <refresh_cntr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_paddle_y_inc> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_paddle_x_inc> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <r_paddle_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001011101.
+WARNING:Xst:653 - Signal <r_paddle_x1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001001110.
+WARNING:Xst:653 - Signal <r_goal_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001101100.
+WARNING:Xst:1780 - Signal <m_line_y2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <m_line_y1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <m_line_x2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <m_line_x1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <goal_y2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000000.
+WARNING:Xst:653 - Signal <goal_y1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000010100000.
+WARNING:Xst:1780 - Signal <cc_border_y2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cc_border_y1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cc_border_x2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cc_border_x1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c_border_y2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c_border_y1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c_border_x2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c_border_x1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <b_paddle_y_inc> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <b_paddle_x_inc> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <b_paddle_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000110010.
+WARNING:Xst:653 - Signal <b_paddle_x1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000100011.
+WARNING:Xst:653 - Signal <b_goal_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000010100.
+WARNING:Xst:653 - Signal <b_border_y6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111100000.
+WARNING:Xst:653 - Signal <b_border_y5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000000.
+WARNING:Xst:1780 - Signal <b_border_y4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <b_border_y3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000111000010.
+WARNING:Xst:1780 - Signal <b_border_y2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <b_border_y1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000101000000.
+WARNING:Xst:1780 - Signal <b_border_x6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <b_border_x5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001001100010.
+WARNING:Xst:1780 - Signal <b_border_x4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <b_border_x3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <b_border_x2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011110.
+WARNING:Xst:1780 - Signal <b_border_x1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit updown accumulator for signal <b_paddle_y1>.
+    Found 32-bit comparator greatequal for signal <b_paddle_y1$cmp_ge0000> created at line 417.
+    Found 32-bit comparator lessequal for signal <b_paddle_y1$cmp_le0000> created at line 411.
+    Found 32-bit updown accumulator for signal <b_paddle_y2>.
+    Found 32-bit register for signal <ball_x1>.
+    Found 32-bit addsub for signal <ball_x1$addsub0000>.
+    Found 32-bit comparator greatequal for signal <ball_x1$cmp_ge0000> created at line 354.
+    Found 32-bit register for signal <ball_x2>.
+    Found 32-bit addsub for signal <ball_x2$addsub0000>.
+    Found 1-bit register for signal <ball_x_inc>.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0000> created at line 305.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0001> created at line 305.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0002> created at line 299.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0003> created at line 295.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0004> created at line 292.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0005> created at line 316.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0006> created at line 316.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0007> created at line 313.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0008> created at line 316.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0009> created at line 292.
+    Found 32-bit comparator greatequal for signal <ball_x_inc$cmp_ge0010> created at line 295.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0000> created at line 347.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0001> created at line 305.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0002> created at line 299.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0003> created at line 295.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0004> created at line 295.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0005> created at line 292.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0006> created at line 316.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0007> created at line 313.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0008> created at line 313.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0009> created at line 313.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0010> created at line 292.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0011> created at line 292.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0012> created at line 295.
+    Found 32-bit comparator lessequal for signal <ball_x_inc$cmp_le0013> created at line 295.
+    Found 32-bit register for signal <ball_y1>.
+    Found 32-bit addsub for signal <ball_y1$addsub0000>.
+    Found 32-bit register for signal <ball_y2>.
+    Found 32-bit addsub for signal <ball_y2$addsub0000>.
+    Found 1-bit register for signal <ball_y_inc>.
+    Found 32-bit comparator lessequal for signal <ball_y_inc$cmp_le0000> created at line 323.
+    Found 10-bit comparator lessequal for signal <hsync_temp$cmp_le0000> created at line 246.
+    Found 32-bit updown accumulator for signal <r_paddle_y1>.
+    Found 32-bit comparator greatequal for signal <r_paddle_y1$cmp_ge0000> created at line 404.
+    Found 32-bit comparator lessequal for signal <r_paddle_y1$cmp_le0000> created at line 398.
+    Found 32-bit updown accumulator for signal <r_paddle_y2>.
+    Found 10-bit comparator greatequal for signal <Rout$cmp_ge0000> created at line 267.
+    Found 10-bit comparator greatequal for signal <Rout$cmp_ge0001> created at line 267.
+    Found 10-bit comparator lessequal for signal <Rout$cmp_le0000> created at line 267.
+    Found 10-bit comparator lessequal for signal <Rout$cmp_le0001> created at line 267.
+    Found 1-bit register for signal <score>.
+    Found 32-bit register for signal <speed>.
+    Found 32-bit comparator greatequal for signal <speed$cmp_ge0000> created at line 334.
+    Found 32-bit comparator greatequal for signal <speed$cmp_ge0001> created at line 326.
+    Found 32-bit comparator greater for signal <speed$cmp_gt0000> created at line 337.
+    Found 32-bit comparator lessequal for signal <speed$cmp_le0000> created at line 334.
+    Found 32-bit comparator lessequal for signal <speed$cmp_le0001> created at line 323.
+    Found 32-bit comparator less for signal <speed$cmp_lt0000> created at line 334.
+    Found 32-bit adder for signal <speed$mux0000>.
+    Found 10-bit comparator lessequal for signal <vsync_temp$cmp_le0000> created at line 247.
+    Summary:
+	inferred   4 Accumulator(s).
+	inferred 163 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  43 Comparator(s).
+Unit <pingpong> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 1
+ 32-bit addsub                                         : 4
+ 9-bit subtractor                                      : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Accumulators                                         : 4
+ 32-bit updown accumulator                             : 4
+# Registers                                            : 9
+ 1-bit register                                        : 5
+ 32-bit register                                       : 4
+# Comparators                                          : 84
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 4
+ 32-bit comparator greatequal                          : 17
+ 32-bit comparator greater                             : 21
+ 32-bit comparator less                                : 21
+ 32-bit comparator lessequal                           : 19
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 1
+ 32-bit addsub                                         : 4
+ 9-bit subtractor                                      : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Accumulators                                         : 4
+ 32-bit updown accumulator                             : 4
+# Registers                                            : 133
+ Flip-Flops                                            : 133
+# Comparators                                          : 84
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 4
+ 32-bit comparator greatequal                          : 17
+ 32-bit comparator greater                             : 21
+ 32-bit comparator less                                : 21
+ 32-bit comparator lessequal                           : 19
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pingpong> ...
+
+Optimizing unit <VGAcontroller> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pingpong, actual ratio is 13.
+Forward register balancing over carry chain VGACon/Msub__sub0000_cy<0>
+
+Pipelining and Register Balancing Report ...
+
+Processing Unit <pingpong> :
+	Register(s) ball_x_inc has(ve) been backward balanced into : ball_x_inc_BRB0 ball_x_inc_BRB1 ball_x_inc_BRB2 ball_x_inc_BRB3.
+Unit <pingpong> processed.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 370
+ Flip-Flops                                            : 370
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pingpong.ngr
+Top Level Output File Name         : pingpong
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 32
+
+Cell Usage :
+# BELS                             : 2287
+#      GND                         : 1
+#      INV                         : 72
+#      LUT1                        : 124
+#      LUT2                        : 486
+#      LUT2_L                      : 2
+#      LUT3                        : 42
+#      LUT4                        : 299
+#      LUT4_L                      : 1
+#      MUXCY                       : 890
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 362
+# FlipFlops/Latches                : 370
+#      FDE                         : 131
+#      FDR                         : 177
+#      FDRE                        : 33
+#      FDS                         : 27
+#      FDSE                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 4
+#      OBUF                        : 27
+# Others                           : 2
+#      icon                        : 1
+#      ila                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      530  out of   4656    11%  
+ Number of Slice Flip Flops:            370  out of   9312     3%  
+ Number of 4 input LUTs:               1026  out of   9312    11%  
+ Number of IOs:                          32
+ Number of bonded IOBs:                  32  out of    232    13%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+rfshclk/refresh_clk1               | BUFG                   | 262   |
+clk                                | BUFGP                  | 1     |
+DACCLK/pixel_clk1                  | BUFG                   | 107   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.231ns (Maximum Frequency: 138.295MHz)
+   Minimum input arrival time before clock: 5.785ns
+   Maximum output required time after clock: 17.300ns
+   Maximum combinational path delay: 1.814ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rfshclk/refresh_clk1'
+  Clock period: 7.231ns (frequency: 138.295MHz)
+  Total number of paths / destination ports: 33881 / 526
+-------------------------------------------------------------------------
+Delay:               7.231ns (Levels of Logic = 34)
+  Source:            ball_y2_1 (FF)
+  Destination:       ball_x_inc_BRB0 (FF)
+  Source Clock:      rfshclk/refresh_clk1 rising
+  Destination Clock: rfshclk/refresh_clk1 rising
+
+  Data Path: ball_y2_1 to ball_x_inc_BRB0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.514   0.766  ball_y2_1 (ball_y2_1)
+     LUT2:I1->O            1   0.612   0.000  Mcompar_ball_x_inc_cmp_le0008_lut<1> (Mcompar_ball_x_inc_cmp_le0008_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<1> (Mcompar_ball_x_inc_cmp_le0008_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<2> (Mcompar_ball_x_inc_cmp_le0008_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<3> (Mcompar_ball_x_inc_cmp_le0008_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<4> (Mcompar_ball_x_inc_cmp_le0008_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<5> (Mcompar_ball_x_inc_cmp_le0008_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<6> (Mcompar_ball_x_inc_cmp_le0008_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<7> (Mcompar_ball_x_inc_cmp_le0008_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<8> (Mcompar_ball_x_inc_cmp_le0008_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<9> (Mcompar_ball_x_inc_cmp_le0008_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<10> (Mcompar_ball_x_inc_cmp_le0008_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<11> (Mcompar_ball_x_inc_cmp_le0008_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<12> (Mcompar_ball_x_inc_cmp_le0008_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<13> (Mcompar_ball_x_inc_cmp_le0008_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<14> (Mcompar_ball_x_inc_cmp_le0008_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<15> (Mcompar_ball_x_inc_cmp_le0008_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<16> (Mcompar_ball_x_inc_cmp_le0008_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<17> (Mcompar_ball_x_inc_cmp_le0008_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<18> (Mcompar_ball_x_inc_cmp_le0008_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<19> (Mcompar_ball_x_inc_cmp_le0008_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<20> (Mcompar_ball_x_inc_cmp_le0008_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<21> (Mcompar_ball_x_inc_cmp_le0008_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<22> (Mcompar_ball_x_inc_cmp_le0008_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<23> (Mcompar_ball_x_inc_cmp_le0008_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<24> (Mcompar_ball_x_inc_cmp_le0008_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<25> (Mcompar_ball_x_inc_cmp_le0008_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<26> (Mcompar_ball_x_inc_cmp_le0008_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<27> (Mcompar_ball_x_inc_cmp_le0008_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<28> (Mcompar_ball_x_inc_cmp_le0008_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<29> (Mcompar_ball_x_inc_cmp_le0008_cy<29>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_ball_x_inc_cmp_le0008_cy<30> (Mcompar_ball_x_inc_cmp_le0008_cy<30>)
+     MUXCY:CI->O           1   0.399   0.387  Mcompar_ball_x_inc_cmp_le0008_cy<31> (ball_x_inc_cmp_le0008)
+     LUT3:I2->O            2   0.612   0.449  ball_x_inc_not000121 (N13)
+     LUT4:I1->O            4   0.612   0.499  ball_x_inc_not000126 (ball_x_inc_not0001)
+     FDSE:CE                   0.483          ball_x_inc_BRB0
+    ----------------------------------------
+    Total                      7.231ns (5.130ns logic, 2.101ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.760ns (frequency: 568.069MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.760ns (Levels of Logic = 0)
+  Source:            DACCLK/pixel_clk (FF)
+  Destination:       DACCLK/pixel_clk (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DACCLK/pixel_clk to DACCLK/pixel_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.451  DACCLK/pixel_clk (DACCLK/pixel_clk1)
+     FDR:R                     0.795          DACCLK/pixel_clk
+    ----------------------------------------
+    Total                      1.760ns (1.309ns logic, 0.451ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DACCLK/pixel_clk1'
+  Clock period: 6.568ns (frequency: 152.251MHz)
+  Total number of paths / destination ports: 6253 / 246
+-------------------------------------------------------------------------
+Delay:               6.568ns (Levels of Logic = 4)
+  Source:            Sinc/vcount_6 (FF)
+  Destination:       Sinc/vcount_0 (FF)
+  Source Clock:      DACCLK/pixel_clk1 rising
+  Destination Clock: DACCLK/pixel_clk1 rising
+
+  Data Path: Sinc/vcount_6 to Sinc/vcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            26   0.514   1.223  Sinc/vcount_6 (Sinc/vcount_6)
+     LUT2_L:I0->LO         1   0.612   0.103  Sinc/vcount_cmp_eq00001_SW0 (N2)
+     LUT4:I3->O            2   0.612   0.383  Sinc/vcount_cmp_eq00001 (N14)
+     LUT4:I3->O            1   0.612   0.000  Sinc/vcount_cmp_eq0000_wg_lut<6> (Sinc/vcount_cmp_eq0000_wg_lut<6>)
+     MUXCY:S->O           32   0.641   1.073  Sinc/vcount_cmp_eq0000_wg_cy<6> (Sinc/vcount_cmp_eq0000)
+     FDRE:R                    0.795          Sinc/vcount_0
+    ----------------------------------------
+    Total                      6.568ns (3.786ns logic, 2.782ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rfshclk/refresh_clk1'
+  Total number of paths / destination ports: 2496 / 256
+-------------------------------------------------------------------------
+Offset:              5.785ns (Levels of Logic = 34)
+  Source:            SW<1> (PAD)
+  Destination:       r_paddle_y1_31 (FF)
+  Destination Clock: rfshclk/refresh_clk1 rising
+
+  Data Path: SW<1> to r_paddle_y1_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            67   1.106   1.151  SW_1_IBUF (SW<1>_inv1_inv1)
+     LUT2:I1->O            1   0.612   0.000  Maccum_r_paddle_y1_lut<0> (Maccum_r_paddle_y1_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Maccum_r_paddle_y1_cy<0> (Maccum_r_paddle_y1_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<1> (Maccum_r_paddle_y1_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<2> (Maccum_r_paddle_y1_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<3> (Maccum_r_paddle_y1_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<4> (Maccum_r_paddle_y1_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<5> (Maccum_r_paddle_y1_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<6> (Maccum_r_paddle_y1_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<7> (Maccum_r_paddle_y1_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<8> (Maccum_r_paddle_y1_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<9> (Maccum_r_paddle_y1_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_r_paddle_y1_cy<10> (Maccum_r_paddle_y1_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<11> (Maccum_r_paddle_y1_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<12> (Maccum_r_paddle_y1_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<13> (Maccum_r_paddle_y1_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<14> (Maccum_r_paddle_y1_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<15> (Maccum_r_paddle_y1_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<16> (Maccum_r_paddle_y1_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<17> (Maccum_r_paddle_y1_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<18> (Maccum_r_paddle_y1_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<19> (Maccum_r_paddle_y1_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<20> (Maccum_r_paddle_y1_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<21> (Maccum_r_paddle_y1_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<22> (Maccum_r_paddle_y1_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<23> (Maccum_r_paddle_y1_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<24> (Maccum_r_paddle_y1_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<25> (Maccum_r_paddle_y1_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<26> (Maccum_r_paddle_y1_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<27> (Maccum_r_paddle_y1_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<28> (Maccum_r_paddle_y1_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_r_paddle_y1_cy<29> (Maccum_r_paddle_y1_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Maccum_r_paddle_y1_cy<30> (Maccum_r_paddle_y1_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  Maccum_r_paddle_y1_xor<31> (Result<31>)
+     FDE:D                     0.268          r_paddle_y1_31
+    ----------------------------------------
+    Total                      5.785ns (4.634ns logic, 1.151ns route)
+                                       (80.1% logic, 19.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 1)
+  Source:            DACCLK/pixel_clk (FF)
+  Destination:       DAC_CLK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DACCLK/pixel_clk to DAC_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.451  DACCLK/pixel_clk (DACCLK/pixel_clk1)
+     OBUF:I->O                 3.169          DAC_CLK_OBUF (DAC_CLK)
+    ----------------------------------------
+    Total                      4.134ns (3.683ns logic, 0.451ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DACCLK/pixel_clk1'
+  Total number of paths / destination ports: 17524 / 48
+-------------------------------------------------------------------------
+Offset:              17.300ns (Levels of Logic = 14)
+  Source:            Sinc/vcount_1 (FF)
+  Destination:       Gout<7> (PAD)
+  Source Clock:      DACCLK/pixel_clk1 rising
+
+  Data Path: Sinc/vcount_1 to Gout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            32   0.514   1.225  Sinc/vcount_1 (Sinc/vcount_1)
+     LUT3:I0->O           16   0.612   1.031  VGACon/Msub__sub0001_xor<4>121 (VGACon/N20)
+     LUT3:I0->O            9   0.612   0.727  VGACon/R_out_or000051 (VGACon/N12)
+     LUT4:I2->O            1   0.612   0.360  VGACon/Msub__sub0001_xor<8>111 (VGACon/N6)
+     LUT4:I3->O            2   0.612   0.383  VGACon/R_out_cmp_gt00092 (VGACon/R_out_cmp_gt0009)
+     LUT4:I3->O            1   0.612   0.000  VGACon/B_out<1>111641 (VGACon/B_out<1>111641)
+     MUXF5:I1->O           1   0.278   0.509  VGACon/B_out<1>11164_f5 (VGACon/B_out<1>11164)
+     LUT4:I0->O            1   0.612   0.000  VGACon/B_out<1>11303_G (N68)
+     MUXF5:I1->O           1   0.278   0.387  VGACon/B_out<1>11303 (VGACon/B_out<1>11303)
+     LUT4:I2->O            1   0.612   0.360  VGACon/B_out<1>11325_SW0 (N55)
+     LUT4:I3->O            4   0.612   0.651  VGACon/B_out<1>11325 (VGACon/N131)
+     LUT3:I0->O            1   0.612   0.000  Gout<7>1_SW01 (Gout<7>1_SW0)
+     MUXF5:I1->O           1   0.278   0.387  Gout<7>1_SW0_f5 (N59)
+     LUT4:I2->O            8   0.612   0.643  Gout<7>1 (Gout_0_OBUF)
+     OBUF:I->O                 3.169          Gout_0_OBUF (Gout<0>)
+    ----------------------------------------
+    Total                     17.300ns (10.637ns logic, 6.663ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rfshclk/refresh_clk1'
+  Total number of paths / destination ports: 7744 / 24
+-------------------------------------------------------------------------
+Offset:              10.865ns (Levels of Logic = 23)
+  Source:            ball_x1_0 (FF)
+  Destination:       Gout<7> (PAD)
+  Source Clock:      rfshclk/refresh_clk1 rising
+
+  Data Path: ball_x1_0 to Gout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.514   0.690  ball_x1_0 (ball_x1_0)
+     LUT2:I0->O            1   0.612   0.000  VGACon/Mcompar_R_out_cmp_gt0000_lut<0> (VGACon/Mcompar_R_out_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<0> (VGACon/Mcompar_R_out_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<1> (VGACon/Mcompar_R_out_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<2> (VGACon/Mcompar_R_out_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<3> (VGACon/Mcompar_R_out_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<4> (VGACon/Mcompar_R_out_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<5> (VGACon/Mcompar_R_out_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<6> (VGACon/Mcompar_R_out_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<7> (VGACon/Mcompar_R_out_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<8> (VGACon/Mcompar_R_out_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<9> (VGACon/Mcompar_R_out_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<10> (VGACon/Mcompar_R_out_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<11> (VGACon/Mcompar_R_out_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<12> (VGACon/Mcompar_R_out_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<13> (VGACon/Mcompar_R_out_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<14> (VGACon/Mcompar_R_out_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  VGACon/Mcompar_R_out_cmp_gt0000_cy<15> (VGACon/Mcompar_R_out_cmp_gt0000_cy<15>)
+     MUXCY:CI->O           1   0.399   0.509  VGACon/Mcompar_R_out_cmp_gt0000_cy<16> (VGACon/Mcompar_R_out_cmp_gt0000_cy<16>)
+     LUT4:I0->O            4   0.612   0.651  VGACon/R_out_and00001 (VGACon/R_out_and0000)
+     LUT4:I0->O            1   0.612   0.000  Gout<7>1_SW02 (Gout<7>1_SW01)
+     MUXF5:I0->O           1   0.278   0.387  Gout<7>1_SW0_f5 (N59)
+     LUT4:I2->O            8   0.612   0.643  Gout<7>1 (Gout_0_OBUF)
+     OBUF:I->O                 3.169          Gout_0_OBUF (Gout<0>)
+    ----------------------------------------
+    Total                     10.865ns (7.985ns logic, 2.880ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.814ns (Levels of Logic = 1)
+  Source:            clk (PAD)
+  Destination:       ila_instance:CLK (PAD)
+
+  Data Path: clk to ila_instance:CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O            1   1.457   0.357  clk_BUFGP (clk_BUFGP)
+    ila:CLK                    0.000          ila_instance
+    ----------------------------------------
+    Total                      1.814ns (1.457ns logic, 0.357ns route)
+                                       (80.3% logic, 19.7% route)
+
+=========================================================================
+WARNING:Xst:615 - Flip flop associated with net DACCLK/pixel_clk not found, property IOB not attached.
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 9.74 secs
+ 
+--> 
+
+
+Total memory usage is 644048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   89 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+	<IPInstance name="SRAM">
+		<FileSets>
+			<FileSet generator="xmdf_to_bom">
+				<File name="SRAM.asy" type="asy" timestamp="Thu Oct 27 17:43:06 2016" checksum="0">
+				</File>
+				<File name="SRAM.ngc" type="ngc" timestamp="Thu Oct 27 17:43:08 2016" checksum="0">
+				</File>
+				<File name="SRAM.sym" type="asy" timestamp="Thu Oct 27 17:42:54 2016" checksum="0">
+				</File>
+				<File name="SRAM.vhd" type="vhdl" timestamp="Thu Oct 27 17:42:54 2016" checksum="0">
+				</File>
+				<File name="SRAM.vho" type="vho" timestamp="Thu Oct 27 17:43:00 2016" checksum="0">
+				</File>
+				<File name="SRAM.xco" type="xco" timestamp="Thu Oct 27 17:42:52 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/example_design/SRAM_top.ucf" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/example_design/SRAM_top.vhd" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/example_design/SRAM_top.xdc" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/example_design/bmg_wrapper.vhd" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/implement.bat" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/implement.sh" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/planAhead_rdn.bat" type="ignore" timestamp="Thu Oct 27 17:43:20 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/planAhead_rdn.sh" type="ignore" timestamp="Thu Oct 27 17:43:20 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/planAhead_rdn.tcl" type="ignore" timestamp="Thu Oct 27 17:43:20 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/xst.prj" type="ignore" timestamp="Thu Oct 27 17:43:20 2016" checksum="0">
+				</File>
+				<File name="SRAM_ste/implement/xst.scr" type="ignore" timestamp="Thu Oct 27 17:43:18 2016" checksum="0">
+				</File>
+				<File name="SRAM_xmdf.tcl" type="ignore" timestamp="Thu Oct 27 17:43:06 2016" checksum="0">
+				</File>
+				<File name="blk_mem_gen_ds512.pdf" type="ignore" timestamp="Thu Oct 27 17:42:42 2016" checksum="0">
+				</File>
+				<File name="blk_mem_gen_v6_2_readme.txt" type="txt" timestamp="Thu Oct 27 17:43:02 2016" checksum="0">
+				</File>
+				<File name="summary.log" type="ignore" timestamp="Thu Oct 27 17:43:06 2016" checksum="0">
+				</File>
+			</FileSet>
+		</FileSets>
+	</IPInstance>
+</BillOfMaterials>
+

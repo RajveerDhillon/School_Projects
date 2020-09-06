@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.ncd
+OUTFILE=/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=/home/student1/r9dhillo/Desktop/mybefinal/pong
+LICENSE=ISE
+USER_INFO=175353682_174116511_0_422

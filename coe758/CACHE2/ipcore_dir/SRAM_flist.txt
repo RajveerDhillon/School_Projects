@@ -1,0 +1,25 @@
+# Output products list for <SRAM>
+SRAM.asy
+SRAM.gise
+SRAM.ngc
+SRAM.sym
+SRAM.vhd
+SRAM.vho
+SRAM.xco
+SRAM.xise
+SRAM_flist.txt
+SRAM_ste/example_design/SRAM_top.ucf
+SRAM_ste/example_design/SRAM_top.vhd
+SRAM_ste/example_design/SRAM_top.xdc
+SRAM_ste/example_design/bmg_wrapper.vhd
+SRAM_ste/implement/implement.bat
+SRAM_ste/implement/implement.sh
+SRAM_ste/implement/planAhead_rdn.bat
+SRAM_ste/implement/planAhead_rdn.sh
+SRAM_ste/implement/planAhead_rdn.tcl
+SRAM_ste/implement/xst.prj
+SRAM_ste/implement/xst.scr
+SRAM_xmdf.tcl
+blk_mem_gen_ds512.pdf
+blk_mem_gen_v6_2_readme.txt
+summary.log

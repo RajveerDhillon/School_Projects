@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+	<IPInstance name="ila">
+		<FileSets>
+			<FileSet generator="xmdf_to_bom">
+				<File name="ila.asy" type="asy" timestamp="Thu Oct 27 17:43:04 2016" checksum="0">
+				</File>
+				<File name="ila.cdc" type="ignore" timestamp="Thu Oct 27 17:42:54 2016" checksum="0">
+				</File>
+				<File name="ila.ngc" type="ngc" timestamp="Thu Oct 27 17:43:02 2016" checksum="0">
+				</File>
+				<File name="ila.sym" type="asy" timestamp="Thu Oct 27 17:42:52 2016" checksum="0">
+				</File>
+				<File name="ila.vhd" type="vhdl" timestamp="Thu Oct 27 17:42:56 2016" checksum="0">
+				</File>
+				<File name="ila.vho" type="vho" timestamp="Thu Oct 27 17:42:58 2016" checksum="0">
+				</File>
+				<File name="ila.xco" type="xco" timestamp="Thu Oct 27 17:42:50 2016" checksum="0">
+				</File>
+				<File name="ila_xmdf.tcl" type="ignore" timestamp="Thu Oct 27 17:43:00 2016" checksum="0">
+				</File>
+			</FileSet>
+		</FileSets>
+	</IPInstance>
+</BillOfMaterials>
+

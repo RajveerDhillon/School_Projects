@@ -1,0 +1,14 @@
+EN vgacontroller NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/VGAcontroller.vhd sub00/vhpl06 1574804265
+AR refresh behavioral /home/student1/r9dhillo/Desktop/mybefinal/pong/refresh.vhd sub00/vhpl05 1574804264
+AR pingpong behavioral /home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd sub00/vhpl09 1574804268
+AR ila ila_a /home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/ila.vhd sub00/vhpl13 1574804258
+AR icon icon_a /home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/icon.vhd sub00/vhpl11 1574804256
+AR sync behavioral /home/student1/r9dhillo/Desktop/mybefinal/pong/Sync.vhd sub00/vhpl03 1574804262
+EN icon NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/icon.vhd sub00/vhpl10 1574804255
+EN pingpong NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/pong.vhd sub00/vhpl08 1574804267
+EN refresh NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/refresh.vhd sub00/vhpl04 1574804263
+EN sync NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/Sync.vhd sub00/vhpl02 1574804261
+AR vgacontroller behavioral /home/student1/r9dhillo/Desktop/mybefinal/pong/VGAcontroller.vhd sub00/vhpl07 1574804266
+AR dac behavioral /home/student1/r9dhillo/Desktop/mybefinal/pong/DAC.vhd sub00/vhpl01 1574804260
+EN ila NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/ipcore_dir/ila.vhd sub00/vhpl12 1574804257
+EN dac NULL /home/student1/r9dhillo/Desktop/mybefinal/pong/DAC.vhd sub00/vhpl00 1574804259

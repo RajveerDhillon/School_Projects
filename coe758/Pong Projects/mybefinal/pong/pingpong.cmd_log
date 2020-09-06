@@ -1,0 +1,122 @@
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-ft256-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -ol high -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student2/mhage/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 
+xst -intstyle ise -ifn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.syr" 
+xst -intstyle ise -ifn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.xst" -ofn "/home/student1/r9dhillo/Desktop/mybefinal/pong/pingpong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc3s500e-fg320-5 pingpong.ngc pingpong.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o pingpong_map.ncd pingpong.ngd pingpong.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd pingpong.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pingpong.twx pingpong.ncd -o pingpong.twr pingpong.pcf -ucf Game.ucf 
+bitgen -intstyle ise -f pingpong.ut pingpong.ncd 

@@ -1,0 +1,187 @@
+Release 13.4 par O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+carnegie.ee.ryerson.ca::  Tue Nov 26 16:38:06 2019
+
+par -w -intstyle ise -pl high -rl high -xe n -t 1 pingpong_map.ncd pingpong.ncd
+pingpong.pcf 
+
+
+Constraints file: pingpong.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment /CMC/tools/xilinx/13.4/ISE_DS/ISE/.
+   "pingpong" is an NCD, version 3.2, device xc3s500e, package fg320, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2012-01-07".
+
+
+
+Design Summary Report:
+
+ Number of External IOBs                          32 out of 232    13%
+
+   Number of External Input IOBs                  5
+
+      Number of External Input IBUFs              5
+        Number of LOCed External Input IBUFs      5 out of 5     100%
+
+
+   Number of External Output IOBs                27
+
+      Number of External Output IOBs             27
+        Number of LOCed External Output IOBs     27 out of 27    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BSCANs                          1 out of 1     100%
+   Number of BUFGMUXs                        4 out of 24     16%
+   Number of RAMB16s                         1 out of 20      5%
+   Number of Slices                        799 out of 4656   17%
+      Number of SLICEMs                     51 out of 2328    2%
+
+
+
+Overall effort level (-ol):   Not applicable because -pl and -rl switches are used
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
+
+Starting Router
+
+
+Phase  1  : 5044 unrouted;      REAL time: 5 secs 
+
+Phase  2  : 4404 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 867 unrouted;      REAL time: 6 secs 
+
+Phase  4  : 1060 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Updating file: pingpong.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 29 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 39 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 39 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
+WARNING:Route:455 - CLK Net:control0<13> may have excessive skew because 
+      1 CLK pins and 4 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 40 secs 
+Total CPU time to Router completion: 40 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         control0<0> |  BUFGMUX_X1Y0| No   |   78 |  0.064     |  0.167      |
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X1Y11| No   |  139 |  0.062     |  0.164      |
++---------------------+--------------+------+------+------------+-------------+
+| rfshclk/refresh_clk | BUFGMUX_X2Y11| No   |  145 |  0.050     |  0.152      |
++---------------------+--------------+------+------+------------+-------------+
+|    DACCLK/pixel_clk | BUFGMUX_X1Y10| No   |   54 |  0.036     |  0.153      |
++---------------------+--------------+------+------+------------+-------------+
+|        control0<13> |         Local|      |    5 |  0.000     |  1.283      |
++---------------------+--------------+------+------+------------+-------------+
+|icon_instance/U0/iUP |              |      |      |            |             |
+|            DATE_OUT |         Local|      |    1 |  0.000     |  1.626      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net con | SETUP       |         N/A|     9.314ns|     N/A|           0
+  trol0<0>                                  | HOLD        |     0.629ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.685ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.596ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net rfs | SETUP       |         N/A|     8.260ns|     N/A|           0
+  hclk/refresh_clk                          | HOLD        |     1.464ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net DAC | SETUP       |         N/A|     6.113ns|     N/A|           0
+  CLK/pixel_clk                             | HOLD        |     0.952ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net ico | SETUP       |         N/A|     1.283ns|     N/A|           0
+  n_instance/U0/iUPDATE_OUT                 | HOLD        |     0.892ns|            |       0|           0
+                                            | MINPERIOD   |         N/A|     1.388ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 41 secs 
+Total CPU time to PAR completion: 40 secs 
+
+Peak Memory Usage:  564 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 1
+
+Writing design to file pingpong.ncd
+
+
+
+PAR done!

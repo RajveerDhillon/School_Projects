@@ -1,0 +1,7 @@
+vhdl work "ipcore_dir/icon.vhd"
+vhdl work "VGAcontroller.vhd"
+vhdl work "Sync.vhd"
+vhdl work "refresh.vhd"
+vhdl work "ipcore_dir/ila.vhd"
+vhdl work "DAC.vhd"
+vhdl work "pong.vhd"
