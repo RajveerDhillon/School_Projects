@@ -35,7 +35,7 @@ Operating systems basic concepts such as process management, scheduling, inter-p
 
 ## Coe 718 Embedded Systems Design
 ### Lab work in C on Keil Uvision 4
-Embedded System Organization with major work done on ARM Cortext M# processor with the Final Project being a Media Application showcasing Photo Viewer, Audio Player and Game with preipherals being used.
+Embedded System Organization with major work done on ARM Cortext M3 processor with the Final Project being a Media Application showcasing Photo Viewer, Audio Player and Game with preipherals being used.
 
 
 ## Coe 758 Digital Systems Engineering
